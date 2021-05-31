@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+</head>
+
+<body>
+  <h1>Formularios</h1>
+  <form action="#">
+    <input type="text" name="nombre" placeholder="Escribe tu nombre" maxlength="30" required><br><br>
+    <input type="text" name="apellido" placeholder="Escribe tu apellido" maxlength="100" required><br><br>
+    <input type="email" name="email" placeholder="Escribe tu email" required><br><br>
+    <label for="pw">Contraseña</label>
+    <input type="password" name="password" id="pw" placeholder="Escribe tu contraseña" minlength="8" required><br><br>
+    <label for="paises">Paises</label>
+    <select name="paises" id="paises">
+      <option value="ar">argentina</option>
+      <option value="uy">uruguay</option>
+      <option value="br">brasil</option>
+    </select><br><br>
+    <input type="submit" value="Enviar datos">
+  </form>
+</body>
+
+</html>
