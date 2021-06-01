@@ -5,66 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Nicolás Grosso</title>
 </head>
 
-<body style="background-color: rgb(12, 12, 68); color: rgb(124, 180, 236)">
+<body>
     <header>
-        <img style="border-style:solid;border-radius: 90px;color:cyan" src="./images/foto.jpg" alt="Foto de Nicolás"
-            width="300px" id="arriba">
+        <img src="./images/foto.jpg" alt="Foto de Nicolás" id="arriba">
         <h1>Nicolás Grosso 💻 </h1>
-        <a style="color:cyan" href="https://www.linkedin.com/in/nicolas-grosso" target="_blank">Linkedin</a>
-  <hr>
-</header>
-    <section>
-        <p title="Educacion">Estudio ingenieria en sistemas en la <span
-                style="text-decoration: underline dashed 2px cyan;">UTN</span> 📓</p>
-        <p title="Experiencia">Desarrollador <em>Java</em>☕ </p>
-        <p title="Pusto actual">Este año arranque como <strong>Lider Técnico</strong> en Watea! 👨‍💻 </p>
-        <p title="Certificaciones" style="color:orange">
-            <em><strong>AWS</strong> Solutions Architect Associate </em>
-            <span style="color:white;font-size:30px">☁</span>
-        </p>
-        <a style="color:cyan" href="pagina2.html" target="_blank">Ir a la pagina 2</a>
-    </section>
-    <hr>
-    <section>
-        <h3>Mis fortalezas son:</h3>
-        <ul>
-            <li>Responsable</li>
-            <li>Perseverante</li>
-            <li>Me gusta ayudar y aportar conocimientos</li>
-        </ul>
-    </section>
-    <section>
-        <h3>Experiencia Laboral</h3>
-        <table border="2px">
-            <tr>
-                <th>Años</th>
-                <th>Lugar</th>
-                <th>Valoracion</th>
-            </tr>
-            <tr>
-                <td>2017-2018</td>
-                <td>Direccion general de cementerios DGCEM GCBA</td>
-                <td>💙</td>
-            </tr>
-            <tr>
-                <td>2018-2018</td>
-                <td>Freelance Historial.com.ar</td>
-                <td>💙💙💙💙</td>
-            </tr>
-            <tr>
-                <td>2018-actualidad</td>
-                <td>Watea! Solutions</td>
-                <td>💙💙💙</td>
-            </tr>
-        </table>
-    </section>
+        <a href="https://www.linkedin.com/in/nicolas-grosso" target="_blank">Linkedin</a>
+        <hr>
+    </header>
+    <main>
+        <section>
+            <p title="Educacion">Estudio ingenieria en sistemas en la <span id="universidad">UTN</span> 📓</p>
+            <p title="Experiencia">Desarrollador <em>Java</em>☕ </p>
+            <p title="Pusto actual">Este año arranque como <strong>Lider Técnico</strong> en Watea! 👨‍💻 </p>
+            <p title="Certificaciones" id="certificacion">
+                <em><strong>AWS</strong> Solutions Architect Associate </em>
+                <span >☁</span>
+            </p>
+            <a href="pagina2.html" target="_blank">Ir a la pagina 2</a>
+        </section>
+        <hr>
+        <section>
+            <h3>Mis fortalezas son:</h3>
+            <ul>
+                <li>Responsable</li>
+                <li>Perseverante</li>
+                <li>Me gusta ayudar y aportar conocimientos</li>
+                <li>Me gusta hacer las cosas bien</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Experiencia Laboral</h3>
+            <table>
+                <tr>
+                    <th>Años</th>
+                    <th>Lugar</th>
+                    <th>Valoracion</th>
+                </tr>
+                <tr>
+                    <td>2017-2018</td>
+                    <td>Direccion general de cementerios DGCEM GCBA</td>
+                    <td>💙</td>
+                </tr>
+                <tr>
+                    <td>2018-2018</td>
+                    <td>Freelance Historial.com.ar</td>
+                    <td>💙💙💙💙</td>
+                </tr>
+                <tr>
+                    <td>2018-actualidad</td>
+                    <td>Watea! Solutions</td>
+                    <td>💙💙💙</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Multimedia</h2>
+            <div>
+                <audio src="./media/perfect.mp3" controls></audio>
+            </div>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/I4uwkvxsUac"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
     <footer>
-<hr>
+        <hr>
         <h5>Hecho para la clase practica de Coderhouse</h5>
-        <a style="color:cyan" href="#arriba">Ir arriba</a>
+        <a href="#arriba">Ir arriba</a>
     </footer>
 </body>
 
