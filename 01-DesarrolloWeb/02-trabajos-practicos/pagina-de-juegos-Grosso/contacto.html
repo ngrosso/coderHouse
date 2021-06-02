@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Informacion</title>
+</head>
+
+<body>
+  <header>
+    <!-- Encabezado de la pagina donde se tiene informacion a otras paginas accesibles y el login-->
+    <h1><a href="index.html">Final Legends</a></h1>
+    <nav>
+      <ul>
+        <li><a href="informacion.html">Informacion</a></li>
+        <li><a href="suscripcion.html">Suscripcion</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+  <main>
+    <section>
+      <form action="">
+        <div>
+          <label for="nombre">Nombre: </label>
+          <input type="text" name="name" id="nombre" placeholder="John Doe">
+        </div>
+        <br>
+        <div>
+          <label for="email">Email: </label>
+          <input type="email" name="correo" id="email" placeholder="email@domain.com">
+        </div>
+        <br>
+        <div>
+          <label for="tipo">Tipo de contacto: </label>
+          <select name="tipoContacto" id="tipo">
+            <option value="consulta">Consulta</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="tecnico">Problema Tecnico</option>
+            <option value="cuenta">Problema con la cuenta</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label for="confirmacion">Desea recibir emails promocionales</label>
+          <input type="checkbox" name="promo" id="confirmacion">
+        </div>
+        <br>
+        <div>
+          <label for="mensaje">Elabore su mensaje</label><br>
+          <textarea name="mensaje" id="mensaje" cols="60" rows="10"></textarea>
+        </div>
+        <div>
+          <input type="submit" name="submit" value="Enviar formulario">
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <hr>
+    <div>
+      <img src="" alt="Logo de la empresa del juego">
+    </div>
+    <ul>
+      <li><a href="www.youtube.com.ar" target="_blank">Youtube</a></li>
+      <li><a href="www.instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="www.twitch.tv" target="_blank">Twitch</a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+#Colores {
+  color: #eeebdd;
+  color: #e84545;
+  color: #903749;
+  color: #53354a;
+  color: #2b2e4a;
+}
+
+header, footer {
+  background-color: #53354a;
+}
+
+body {
+  background-color: #2b2e4a;
+}
+
+main img {
+  width: 700px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #e84545;
+}
+
+p{
+  color:#eeebdd;
+}
+
+.logo-empresa{
+  width:200px;
+}

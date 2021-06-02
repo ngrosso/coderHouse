@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-05-26T15:00:03</date>
+  <millis>1622052003714</millis>
+  <sequence>0</sequence>
+  <logger>watea.afip.AFIPd</logger>
+  <level>INFO</level>
+  <class>watea.afip.AFIPd</class>
+  <method>procesarFacturas</method>
+  <thread>1</thread>
+  <message>Iniciando loop de Servicio.</message>
+</record>
+<record>
+  <date>2021-05-26T15:00:04</date>
+  <millis>1622052004023</millis>
+  <sequence>1</sequence>
+  <logger>watea.afip.ServiceManager</logger>
+  <level>INFO</level>
+  <class>watea.afip.ServiceManager</class>
+  <method>procesarFacturas</method>
+  <thread>1</thread>
+  <message>Watea! Factura Electronica Stoller v1-11i(TEST)</message>
+</record>
+<record>
+  <date>2021-05-26T15:00:05</date>
+  <millis>1622052005278</millis>
+  <sequence>2</sequence>
+  <logger>watea.afip.AFIPd</logger>
+  <level>INFO</level>
+  <class>watea.afip.AFIPd</class>
+  <method>procesarFacturas</method>
+  <thread>1</thread>
+  <message>Saliendo del loop de Servicio.</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:29</date>
+  <millis>1622055809337</millis>
+  <sequence>3</sequence>
+  <logger>watea.afip.ServiceInstance</logger>
+  <level>INFO</level>
+  <class>watea.afip.ServiceInstance</class>
+  <method>run</method>
+  <thread>10</thread>
+  <message>Tenemos trabajo. Customer_Trx_Id: 1077400</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:31</date>
+  <millis>1622055811137</millis>
+  <sequence>4</sequence>
+  <logger>watea.afip.RequestFactory</logger>
+  <level>INFO</level>
+  <class>watea.afip.RequestFactory</class>
+  <method>getRequest</method>
+  <thread>10</thread>
+  <message>Tipo de transaccion: WSMTXCA</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:32</date>
+  <millis>1622055812121</millis>
+  <sequence>5</sequence>
+  <logger>watea.afip.ws.wsaa.WSAALoginManager</logger>
+  <level>INFO</level>
+  <class>watea.afip.ws.wsaa.WSAALoginManager</class>
+  <method>getCredential</method>
+  <thread>10</thread>
+  <message>Utilizando el servicename : wsmtxca</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:32</date>
+  <millis>1622055812402</millis>
+  <sequence>6</sequence>
+  <logger>watea.afip.ws.wsaa.CMSDataGenerator</logger>
+  <level>INFO</level>
+  <class>watea.afip.ws.wsaa.CMSDataGenerator</class>
+  <method>loadKeys</method>
+  <thread>10</thread>
+  <message>loadKeys : Keystore java.security.KeyStore@1ef2924</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:32</date>
+  <millis>1622055812411</millis>
+  <sequence>7</sequence>
+  <logger>watea.afip.ws.wsaa.CMSDataGenerator</logger>
+  <level>INFO</level>
+  <class>watea.afip.ws.wsaa.CMSDataGenerator</class>
+  <method>loadKeys</method>
+  <thread>10</thread>
+  <message>loadKeys : Key sun.security.rsa.RSAPrivateCrtKeyImpl@fffd5af0</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:32</date>
+  <millis>1622055812422</millis>
+  <sequence>8</sequence>
+  <logger>watea.afip.ws.wsaa.CMSDataGenerator</logger>
+  <level>INFO</level>
+  <class>watea.afip.ws.wsaa.CMSDataGenerator</class>
+  <method>loadKeys</method>
+  <thread>10</thread>
+  <message>loadKeys : Certificate [
+[
+  Version: V3
+  Subject: C=ar, O=stoller argentina s a, SERIALNUMBER=CUIT 30707505113, CN=stoller argentina s a
+  Signature Algorithm: SHA512withRSA, OID = 1.2.840.113549.1.1.13
+
+  Key:  Sun RSA public key, 2048 bits
+  modulus: 27115630028093829326204417300656191178751847573747598150084924575808158907493160766627659767903466824128535511113138683540003825392847892684766969746761764122593986515204401280691926397658395718728175164059753822012860712053700716489364476681166758775920134255500440337692284228266838003756818725189617618247372271570794979453753962915318199281317082822369430271434880344785490655532258825046774686897311009274897674555107514588373610704186398475346120711862140012235365831729579202478147093798332804259541630791887157535910730933665207227715898150888314843408412951684461423901895642951655107272604475491718773725717
+  public exponent: 65537
+  Validity: [From: Wed Feb 17 16:38:53 GMT-03:00 2021,
+               To: Fri Feb 17 16:38:53 GMT-03:00 2023]
+  Issuer: C=AR, O=AFIP, CN=Computadores
+  SerialNumber: [    079b477b 27a31d83]
+
+Certificate Extensions: 4
+[1]: ObjectId: 2.5.29.35 Criticality=false
+AuthorityKeyIdentifier [
+KeyIdentifier [
+0000: 5B 40 51 30 E7 C3 2A B6   9C 56 9C 93 85 E3 42 80  [@Q0..*..V....B.
+0010: B0 50 EB F6                                        .P..
+]
+]
+
+[2]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:false
+  PathLen: undefined
+]
+
+[3]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  DigitalSignature
+  Non_repudiation
+  Key_Encipherment
+]
+
+[4]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 35 4F AD 2F C1 17 8A 0C   92 02 29 AD E4 57 45 BB  5O./......)..WE.
+0010: E6 7A 08 94                                        .z..
+]
+]
+
+]
+  Algorithm: [SHA512withRSA]
+  Signature:
+0000: 9F A9 47 5E 82 89 5F E3   69 FA 35 9D 59 FF 01 DD  ..G^.._.i.5.Y...
+0010: 71 19 7A D6 9D 50 46 1D   80 C6 A7 A5 39 C6 18 5B  q.z..PF.....9..[
+0020: AC 53 76 13 06 2F 43 89   C1 9D 4B 7F 57 37 0A 57  .Sv../C...K.W7.W
+0030: 9E DB 47 AE 4F 4C E4 AA   55 33 FC E0 DA D4 5A 89  ..G.OL..U3....Z.
+0040: B7 D8 FA 85 66 1C E4 E9   54 21 7B CA FC 46 89 E6  ....f...T!...F..
+0050: A4 42 3A E7 F5 07 1E 4D   CF BB 5A AA 5D 03 69 EA  .B:....M..Z.].i.
+0060: 9E 1F DC 61 41 BB 1E F9   B1 13 FA 3C EE 7B A0 A3  ...aA......&lt;....
+0070: D7 80 68 E9 6E 94 3C 15   3F CB 22 50 2B 33 F0 58  ..h.n.&lt;.?."P+3.X
+0080: 3C D8 5F 86 E8 54 66 DC   09 9E 0D F6 F4 0C B4 D9  &lt;._..Tf.........
+0090: B5 4A A0 E1 7C 70 05 DD   F6 AD 62 51 53 D5 AB 0B  .J...p....bQS...
+00A0: C2 46 3D A2 E4 06 1B 52   78 97 4A 17 01 FC 2E 32  .F=....Rx.J....2
+00B0: 98 34 95 AB 86 83 DF F9   36 E9 73 5F DA 64 2F 85  .4......6.s_.d/.
+00C0: 64 1F EC 89 B9 3D 12 4E   CF 5B 54 AB 74 96 1E A5  d....=.N.[T.t...
+00D0: 21 86 AE F2 FE D2 C8 B4   7D F5 71 73 75 30 45 EE  !.........qsu0E.
+00E0: 49 A7 34 09 19 AD BA 9D   A4 9F BF A6 27 18 5D 11  I.4.........'.].
+00F0: 55 58 5F BD 49 C4 C6 9F   5C 05 81 CE E1 D2 C1 E4  UX_.I...\.......
+
+]</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:32</date>
+  <millis>1622055812423</millis>
+  <sequence>9</sequence>
+  <logger>watea.afip.ws.wsaa.CMSDataGenerator</logger>
+  <level>INFO</level>
+  <class>watea.afip.ws.wsaa.CMSDataGenerator</class>
+  <method>loadKeys</method>
+  <thread>10</thread>
+  <message>loadKeys : empresaDN C=ar, O=stoller argentina s a, SERIALNUMBER=CUIT 30707505113, CN=stoller argentina s a</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:43</date>
+  <millis>1622055823480</millis>
+  <sequence>10</sequence>
+  <logger>watea.afip.WSMTXCARequest</logger>
+  <level>SEVERE</level>
+  <class>watea.afip.WSMTXCARequest</class>
+  <method>run</method>
+  <thread>10</thread>
+  <message>watea.afip.WSMTXCARequestrun()</message>
+  <exception>
+    <message>java.lang.Exception: Problema al buscar la credencial debido a: Certificado no emitido por AC de confianza</message>
+    <frame>
+      <class>watea.afip.ws.wsaa.WSAALoginManager</class>
+      <method>getCredential</method>
+      <line>177</line>
+    </frame>
+    <frame>
+      <class>watea.afip.WSMTXCARequest</class>
+      <method>getAuthRequest</method>
+      <line>129</line>
+    </frame>
+    <frame>
+      <class>watea.afip.WSMTXCARequest</class>
+      <method>run</method>
+      <line>375</line>
+    </frame>
+    <frame>
+      <class>watea.afip.ServiceInstance</class>
+      <method>run</method>
+      <line>333</line>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.ThreadPoolExecutor</class>
+      <method>runWorker</method>
+      <line>1149</line>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.ThreadPoolExecutor$Worker</class>
+      <method>run</method>
+      <line>624</line>
+    </frame>
+    <frame>
+      <class>java.lang.Thread</class>
+      <method>run</method>
+      <line>748</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-05-26T16:03:43</date>
+  <millis>1622055823482</millis>
+  <sequence>11</sequence>
+  <logger>watea.afip.WSMTXCARequest</logger>
+  <level>INFO</level>
+  <class>watea.afip.WSMTXCARequest</class>
+  <method>run</method>
+  <thread>10</thread>
+  <message>Error en el run: Problema al buscar la credencial debido a: Certificado no emitido por AC de confianza</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:43</date>
+  <millis>1622055823510</millis>
+  <sequence>12</sequence>
+  <logger>watea.afip.WSMTXCARequest</logger>
+  <level>INFO</level>
+  <class>watea.afip.AbstractRequest</class>
+  <method>SendDataError</method>
+  <thread>10</thread>
+  <message>customerTrxId: 1077400</message>
+</record>
+<record>
+  <date>2021-05-26T16:03:43</date>
+  <millis>1622055823511</millis>
+  <sequence>13</sequence>
+  <logger>watea.afip.WSMTXCARequest</logger>
+  <level>INFO</level>
+  <class>watea.afip.AbstractRequest</class>
+  <method>SendDataError</method>
+  <thread>10</thread>
+  <message>errMsg: Problema al buscar la credencial debido a: Certificado no emitido por AC de confianza</message>
+</record>

@@ -1,0 +1,103 @@
+Colores {
+  color: #eeebdd;
+  color: #e84545;
+  color: #903749;
+  color: #53354a;
+  color: #2b2e4a;
+}
+/**Selector universal base*/
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #eeebdd;
+}
+
+/**CSS para cosas genericas y repetidas*/
+
+a, a:visited {
+  text-decoration: none;
+  color: #e84545;
+}
+
+/**Header*/
+
+header {
+  background-color: #53354a;
+}
+
+header h1 {
+  color: #e84545;
+  float: left;
+  padding: 4px;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header nav ul li {
+  float: left;
+  text-align: center;
+}
+
+header nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+}
+
+header nav ul li a:hover {
+  background-color: #903749;
+}
+
+/**Body*/
+
+body {
+  background-color: #2b2e4a;
+}
+
+/**Main*/
+
+main img {
+  width: 700px;
+}
+
+main table, th, td {
+  border: solid 2px black;
+}
+
+main td {
+  padding: 20px;
+  text-align: center;
+}
+
+#boton-descarga {
+  width: 33%;
+  height: 100px;
+  margin-left: 33%;
+}
+
+button {
+  color: #2B2E4A;
+  width: 100%;
+  height: 100%;
+  background-color: #903749;
+  border: dashed #e84545 5px;
+  font-size: 3rem;
+}
+
+button:hover {
+  background-color: #53354a;
+  color: #903749;
+}
+
+/**Footer*/
+
+footer {
+  background-color: #53354a;
+}
