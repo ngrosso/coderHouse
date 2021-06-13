@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerPadre {
+  background-color: black;
+  width: 90%;
+  height: 400px;
+  /*Jugando con flex*/
+  display: flex;
+  /*
+  flex-direction: row;
+  flex-wrap: wrap;
+  */
+  flex-flow: row wrap; /*shorthanded de lo anterior*/
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  /*end*/
+}
+
+.color {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.azul {
+  background-color: blue;
+  order:2;
+}
+
+.verde{
+  background-color: green;
+}
+
+.rojo{
+  background-color: red;
+  flex-basis: 100px; /*Depende que sea column o row*/
+}
+
+.amarillo{
+  background-color: yellow;
+  flex-grow: 2;
+}
+
+.fucsia{
+  background-color: fuchsia;
+  /*
+  flex-grow:1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  */
+  flex:1 /*Shorthanded de grow, shrink y basis*/
+}
+
+.gris{
+  background-color: grey;
+}

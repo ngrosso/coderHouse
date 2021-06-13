@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Charm:wght@400;700&family=Darker+Grotesque:wght@400;700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /*Ignorar, es solo para tener los colores y las fonts a mano*/
+
 #colores {
   color: #eeebdd;
   color: #e84545;
@@ -14,8 +15,11 @@
   font-family: 'Caveat', cursive;
   font-family: 'Charm', cursive;
 }
+
 /*=========================================================*/
+
 /*Selector universal*/
+
 * {
   padding: 0;
   margin: 0;
@@ -48,7 +52,7 @@ nav ul li a {
 
 header {
   position: fixed;
-  padding: 10px 5px 0px 10px;
+  padding: 5px 5px 0px 10px;
   top: 0;
   width: 100%;
   height: 70px;
@@ -99,6 +103,29 @@ li {
   font-family: 'Lato', sans-serif;
 }
 
+.listBgColor {
+  background-color: #53354a;
+}
+
+li.desplegable ul {
+  margin: 0;
+  display: none;
+  position: absolute;
+  min-width: 100px;
+}
+
+li.desplegable ul li {
+  position: relative;
+}
+
+li.desplegable:hover ul {
+  display: block
+}
+
+.hoverDisplay:hover {
+  display: block;
+}
+
 body {
   background-color: #2b2e4a;
 }
@@ -115,6 +142,7 @@ main img {
 
 section {
   margin: 30px 20px;
+  display: inline-block;
 }
 
 a, a:visited {
@@ -143,6 +171,10 @@ th {
 td {
   color: #e84545;
   font-weight: normal;
+}
+
+iframe {
+  padding-top: 20px;
 }
 
 .centerSection {
@@ -180,9 +212,17 @@ button {
   width: 50%;
   height: 100px;
   margin: auto 25%;
+  background-color: #903749;
+  border: 5px #e84545 ridge;
+}
+
+button:hover {
+  background-color: #e84545;
+  border-color: #903749;
 }
 
 /*Clases*/
+
 .login {
   float: right;
   margin-right: 5%;
@@ -209,6 +249,23 @@ button {
   background-repeat: no-repeat;
 }
 
+.centerSection {
+  min-width: 50%;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.displayInfo {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.sideArticle {
+  padding: 25px;
+}
+
 .logoEmpresa {
   margin-top: 20px;
   display: inline;
@@ -219,6 +276,7 @@ button {
 }
 
 /*Ids*/
+
 #botonDescarga {
   margin-top: 30px;
 }

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style/style.css">
   <title>Final Legends</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -18,7 +19,13 @@
         <li><a href="informacion.html">Informacion</a></li>
         <li><a href="suscripcion.html">Suscripcion</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li class="login"><a href="login.html">Login</a></li>
+        <li class="login desplegable" ><a>Cuenta</a>
+          <ul class="hoverDisplay listBgColor">
+            <li><a href="login.html">Iniciar Sesion</a></li>
+            <li><a href="#">Registrarse</a></li>
+            <li><a href="#">Perfil</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
@@ -30,9 +37,12 @@
       <img src="./images/image3.jpg" alt="imagen del juego 3">
     </section>
     <section>
-      <h2>Subtitulo del juego</h2>
-      <div>
-        <article>
+      <div class="centerSection displayInfo">
+        <div>
+          <h2>Subtitulo del juego</h2>
+          <img src="./images/image4.jpg" alt="imagen del juego 4" class="sideImage">
+        </div>
+        <article class="sideArticle">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nesciunt, minus amet odit laudantium
             architecto porro iusto nihil quaerat cumque a? Reprehenderit minima facilis maiores aut autem debitis ullam
             sit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad reprehenderit asperiores similique beatae
@@ -42,31 +52,26 @@
             doloribus quam, odio aut magni.
           </p>
         </article>
-        <div>
-          <img src="./images/image4.jpg" alt="imagen del juego 4">
-        </div>
       </div>
     </section>
-      <div class="parallax"></div>
-      <section>
-        <div>
-          <div>
-            <img src="./images/image5.jpg" alt="imagen del juego 5">
-          </div>
-          <article>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nostrum iste odio rerum quas.
-              Molestias
-              laboriosam recusandae nobis ab, quod est. Eius labore quod beatae magni, reiciendis omnis explicabo maiores?
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium hic perspiciatis officia alias
-              eos unde optio ea veniam odio. Obcaecati sed accusantium quisquam enim pariatur libero deserunt cupiditate
-              repudiandae.
-              Doloribus, nemo commodi. Similique neque eaque ea totam illum molestias! Quae temporibus, nesciunt placeat
-              officiis impedit deleniti quis voluptas et dolore voluptatem nam distinctio illum omnis similique. Modi,
-              dicta facilis?
-            </p>
-          </article>
-        </div>
-      </section>
+    <div class="parallax"></div>
+    <section>
+      <div class="centerSection displayInfo">
+        <article class="sideArticle">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nostrum iste odio rerum quas.
+            Molestias
+            laboriosam recusandae nobis ab, quod est. Eius labore quod beatae magni, reiciendis omnis explicabo maiores?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium hic perspiciatis officia alias
+            eos unde optio ea veniam odio. Obcaecati sed accusantium quisquam enim pariatur libero deserunt cupiditate
+            repudiandae.
+            Doloribus, nemo commodi. Similique neque eaque ea totam illum molestias! Quae temporibus, nesciunt placeat
+            officiis impedit deleniti quis voluptas et dolore voluptatem nam distinctio illum omnis similique. Modi,
+            dicta facilis?
+          </p>
+        </article>
+        <img src="./images/image5.jpg" alt="imagen del juego 5" class="sideImage">
+      </div>
+    </section>
     <div id="botonDescarga">
       <button>Descarga del juego</button>
     </div>
