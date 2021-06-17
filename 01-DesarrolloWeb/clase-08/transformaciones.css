@@ -1,0 +1,35 @@
+div{
+  width: 200px;
+  height: 200px;
+  border: 3px solid black;
+  margin: 20px;
+  display:inline-block;
+}
+
+.transf1{
+  background-color: aqua;
+}
+.transf1:hover{
+  transform: translate(550px, 250px)
+}
+
+.transf2{
+  background-color: coral;
+}
+.transf2:hover{
+  transform: scale(1.5,1.5);
+}
+
+.transf3{
+  background-color: lime;
+}
+.transf3:hover{
+  transform: rotate(45deg);
+}
+
+.transf4{
+  background-color: violet;
+}
+.transf4:hover{
+  transform: skew(20deg)
+}

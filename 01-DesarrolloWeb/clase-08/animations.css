@@ -1,0 +1,56 @@
+@keyframes anima{
+  0%{ width: 100px; }
+  25%{ width: 300px; }
+  50%{ width: 200px;
+    background-color: #affa5a; }
+  75%{ width: 300px;}
+  100%{ width: 100px;
+    background-color:#c921bb;}
+}
+.anim {
+  width: 100px;
+  height: 100px;
+  background-color: #7270e2;
+  animation-name: anima;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 5s;
+  animation-delay: 0s;
+}
+div.animame {
+  width: 100px; height: 100px;
+  background-color: #7700ffe6;
+  border: solid 1px;
+} 
+div {
+  position: relative;
+  Left:200px; top:50px;
+}
+
+@keyframes animacion {
+  from { }
+  to {
+    transform: rotate(180deg);
+  }
+} 
+.animame {
+   animation: animacion 3s linear 3s infinite alternate;}
+.aparecer{
+  margin:100px;
+  animation-duration: 8s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+@keyframes aparecer {
+  0% {
+      opacity: 0;
+      }
+  50% {
+      opacity: 1;
+      }
+  100% {
+    opacity: 0;
+      }
+}
+    
+        
