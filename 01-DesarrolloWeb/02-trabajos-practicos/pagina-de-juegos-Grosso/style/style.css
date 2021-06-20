@@ -26,6 +26,9 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #2b2e4a;
+}
 /*Etiquetas*/
 
 header, footer {
@@ -71,10 +74,12 @@ header nav ul li {
 
 footer {
   position: fixed;
-  padding: 10px 10px 0px 10px;
+  display:flex;
+  padding: 1.5vh;
   bottom: 0;
   width: 100%;
-  height: 40px;
+  height: 5vh;
+  align-items: center;
 }
 
 h1 {
@@ -126,10 +131,6 @@ li.desplegable:hover ul {
   display: block;
 }
 
-body {
-  background-color: #2b2e4a;
-}
-
 main {
   margin: 70px 0px 50px 0px;
   padding: 10px 0px 10px 0px;
@@ -137,12 +138,11 @@ main {
 
 main img {
   /*TODO:tamaño placeholder para luego agregar el efecto que se quiere*/
-  width: 700px;
+  max-width: 700px;
 }
 
 section {
-  margin: 30px 20px;
-  display: inline-block;
+  margin: 30px auto;
 }
 
 a, a:visited {
@@ -179,6 +179,9 @@ iframe {
 
 .centerSection {
   text-align: center;
+  min-width: 50%;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 form {
@@ -228,15 +231,19 @@ button:hover {
   margin-right: 5%;
 }
 
+.socialMedia {
+  position: fixed;
+  right: 2%;
+  display: inline-block;
+}
+
 .socialMedia li {
   display: inline;
   padding-right: 10px;
 }
 
-.socialMedia {
-  position: fixed;
-  right: 2%;
-  display: inline-block;
+.socialMedia i{
+  padding-right:5px;
 }
 
 .parallax {
@@ -249,25 +256,33 @@ button:hover {
   background-repeat: no-repeat;
 }
 
-.centerSection {
-  min-width: 50%;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+.displayInfo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:  1fr;
+  gap: 20px;
 }
 
-.displayInfo {
-  display: flex;
-  align-items: center;
-  align-content: center;
+.imagenIzq{
+  grid-template-areas:"imagen texto"; 
+}
+
+.imagenDer{
+  grid-template-areas:"texto imagen" ;
 }
 
 .sideArticle {
-  padding: 25px;
+  grid-area: texto;
+  grid-row-start: 1;
+  align-self: center;
+}
+
+.sideImage{
+  grid-area: imagen;
+  grid-row-start: 1;
 }
 
 .logoEmpresa {
-  margin-top: 20px;
   display: inline;
 }
 
@@ -278,5 +293,58 @@ button:hover {
 /*Ids*/
 
 #botonDescarga {
-  margin-top: 30px;
+  display:flex;
+  margin-bottom: 40px;
+}
+
+/*Media queries SM*/
+@media only screen and (max-width: 1300px) {
+
+  img{
+    max-width: 660px;
+  }
+
+  main{
+    width: 100vh;
+  }
+
+  .parallax{
+    background-position: center left;
+    background-image: url("../images/image7.jpg");
+    background-size: 100vh;
+  }
+  .displayInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr;
+    gap: 20px;
+  }
+
+  .imagenIzq,.imagenDer{
+    grid-template-areas:"imagen" "texto"; 
+  }
+
+  .sideArticle {
+    grid-row-start: 2;
+  }
+
+  header{
+    font-size: 1.1rem;
+    height: 10vh;
+
+  }
+
+  footer {
+    height: 10vh;
+    font-size: 3rem;
+  }
+
+  .socialMedia i{
+    padding-right: 20px;
+  }
+
+  .socialMedia span{
+    display: none;
+  }
+  
 }
