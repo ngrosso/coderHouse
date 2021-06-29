@@ -29,7 +29,12 @@ h2 {
   grid-template-columns: repeat(5, 1fr);
   /*grid-template-rows:1fr 1fr 1fr 1fr;*/
   grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "uno uno uno" "dos dos tres" "cuatro cuatro cinco" "cuatro cuatro cinco" "doce siete ocho";
+  grid-template-areas: 
+    "uno uno uno" 
+    "dos dos tres" 
+    "cuatro cuatro cinco" 
+    "cuatro cuatro cinco" 
+    "doce siete ocho";
   gap: 10px;
   /*"margen" entre las casillas*/
 }
