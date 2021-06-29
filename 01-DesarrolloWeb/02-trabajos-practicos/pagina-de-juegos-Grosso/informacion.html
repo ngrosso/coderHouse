@@ -5,28 +5,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./style/style.css">
-  <title>Informacion</title>
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <title>Final Legends</title>
+
 </head>
 
 <body>
   <header>
-    <!-- Encabezado de la pagina donde se tiene informacion a otras paginas accesibles y el login-->
-    <h1><a href="index.html">Final Legends</a></h1>
-    <nav>
-      <ul>
-        <li><a href="informacion.html">Informacion</a></li>
-        <li><a href="suscripcion.html">Suscripcion</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li class="login desplegable" ><a>Cuenta</a>
-          <ul class="hoverDisplay listBgColor">
-            <li><a href="login.html">Iniciar Sesion</a></li>
-            <li><a href="#">Registrarse</a></li>
-            <li><a href="#">Perfil</a></li>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <h1 class="pt-3"><a href="index.html" class="animatedText">Final Legends</a></h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="informacion.html" class="nav-link">Informacion</a>
+            </li>
+            <li class="nav-item">
+              <a href="suscripcion.html" class="nav-link">Suscripcion</a>
+            </li>
+            <li class="nav-item">
+              <a href="contacto.html" class="nav-link">Contacto</a>
+            </li>
           </ul>
-        </li>
-      </ul>
+          <div class="dropdown">
+            <a class="btn dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Cuenta
+            </a>
+            <ul class="dropdown-menu listBgColor" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="login.html">Inicio Sesion</a></li>
+              <li><a class="dropdown-item" href="#">Registrarse</a></li>
+              <li><a class="dropdown-item" href="#">Buscar Perfil</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
   <main>
@@ -76,12 +97,18 @@
     </div>
     <div class="socialMedia">
       <ul>
-        <li><a href="www.youtube.com.ar" target="_blank">Youtube</a></li>
-        <li><a href="www.instagram.com" target="_blank">Instagram</a></li>
-        <li><a href="www.twitch.tv" target="_blank">Twitch</a></li>
+        <li><a href="https//www.youtube.com.ar" target="_blank"><i class="fab fa-youtube"></i><span>Youtube</span></a>
+        </li>
+        <li><a href="https//www.instagram.com" target="_blank"><i
+              class="fab fa-instagram"></i><span>Instagram</span></a></li>
+        <li><a href="https//www.twitch.tv" target="_blank"><i class="fab fa-twitch"></i><span>Twitch</span></a></li>
       </ul>
     </div>
   </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

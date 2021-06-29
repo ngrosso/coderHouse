@@ -18,6 +18,28 @@
 
 /*=========================================================*/
 
+/* Bootstrap Reboot override*/
+
+dl, ol, ul {
+  margin-bottom: 0;
+}
+
+.navbar {
+  padding: 0;
+  background-color: #53354a;
+}
+
+.btn:hover {
+  color: #e84545;
+}
+
+.navbar-light, .navbar-nav, .nav-link {
+  text-decoration: none;
+  color: #e84545 !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+}
+
 /*Selector universal*/
 
 * {
@@ -26,55 +48,31 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: #2b2e4a;
 }
+
 /*Etiquetas*/
 
-header, footer {
+
+footer {
   background-color: #53354a;
+  z-index: 2;
 }
 
-nav ul {
-  margin-top: 5px;
-  padding: 0;
-  overflow: hidden;
+
+.navbar {
+  z-index: 2;
 }
 
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-header {
-  position: fixed;
-  padding: 5px 5px 0px 10px;
-  top: 0;
-  width: 100%;
-  height: 70px;
-}
-
-header h1 {
-  color: #e84545;
-  float: left;
-  padding: 4px;
-}
-
-header nav ul li {
-  float: left;
-  text-align: center;
+.vertical-center {
+  display: flex;
+  align-items: center;
 }
 
 footer {
   position: fixed;
-  display:flex;
+  display: flex;
   padding: 1.5vh;
   bottom: 0;
   width: 100%;
@@ -132,13 +130,25 @@ li.desplegable:hover ul {
 }
 
 main {
-  margin: 70px 0px 50px 0px;
+  margin: 70px 0px 70px 0px;
   padding: 10px 0px 10px 0px;
 }
 
-main img {
-  /*TODO:tamaño placeholder para luego agregar el efecto que se quiere*/
-  max-width: 700px;
+.aumento {
+  transition: all 1s ease-in-out;
+}
+
+.aumento:hover {
+  border: 2px solid #e84545;
+  transition: all 1s ease-in-out;
+}
+
+.aumentoDer:hover {
+  transform: translate(50%, 0%) scale(1.5, 1.5);
+}
+
+.aumentoIzq:hover {
+  transform: translate(-50%, 0%) scale(1.5, 1.5);
 }
 
 section {
@@ -180,7 +190,7 @@ iframe {
 .centerSection {
   text-align: center;
   min-width: 50%;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -204,14 +214,18 @@ input[type="textarea"] {
   overflow-y: scroll;
 }
 
-input[type="submit"], button {
+input[type="submit"], #botonDescarga button {
   width: 100%;
   height: 3rem;
   font-family: 'Caveat', cursive;
   font-size: 2rem;
 }
 
-button {
+#botonDescarga{
+  padding-bottom: 50px;
+}
+
+#botonDescarga button {
   width: 50%;
   height: 100px;
   margin: auto 25%;
@@ -219,7 +233,7 @@ button {
   border: 5px #e84545 ridge;
 }
 
-button:hover {
+#botonDescarga button:hover {
   background-color: #e84545;
   border-color: #903749;
 }
@@ -242,33 +256,35 @@ button:hover {
   padding-right: 10px;
 }
 
-.socialMedia i{
-  padding-right:5px;
+.socialMedia i {
+  padding-right: 5px;
 }
 
 .parallax {
   margin-top: 30px;
   background-image: url("../images/image6.jpg");
   min-height: 500px;
+  max-height: 600px;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .displayInfo {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows:  1fr;
+  grid-template-rows: 1fr;
   gap: 20px;
 }
 
-.imagenIzq{
-  grid-template-areas:"imagen texto"; 
+.imagenIzq {
+  grid-template-areas: "imagen texto";
 }
 
-.imagenDer{
-  grid-template-areas:"texto imagen" ;
+.imagenDer {
+  grid-template-areas: "texto imagen";
 }
 
 .sideArticle {
@@ -277,9 +293,14 @@ button:hover {
   align-self: center;
 }
 
-.sideImage{
+.sideImage {
   grid-area: imagen;
   grid-row-start: 1;
+  max-width: 700px;
+}
+
+.imgMainSec img {
+  max-width: 700px;
 }
 
 .logoEmpresa {
@@ -293,58 +314,91 @@ button:hover {
 /*Ids*/
 
 #botonDescarga {
-  display:flex;
+  display: flex;
   margin-bottom: 40px;
 }
 
+/*Animaciones*/
+
+@keyframes backgroundRotation {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.animatedText, a:hover {
+  background: linear-gradient(218deg, #b9559b 20%, #e84545 40%, #e84545 60%, #b9559b 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: backgroundRotation 1s linear infinite;
+}
+
 /*Media queries SM*/
+
 @media only screen and (max-width: 1300px) {
-
-  img{
-    max-width: 660px;
-  }
-
-  main{
-    width: 100vh;
-  }
-
-  .parallax{
+  .parallax {
     background-position: center left;
-    background-image: url("../images/image7.jpg");
-    background-size: 100vh;
+    min-height: 300px;
+    max-height: 450px;
   }
   .displayInfo {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  1fr;
+    grid-template-rows: 1fr;
     gap: 20px;
   }
-
-  .imagenIzq,.imagenDer{
-    grid-template-areas:"imagen" "texto"; 
+  .imagenIzq, .imagenDer {
+    grid-template-areas: "imagen" "texto";
   }
-
   .sideArticle {
     grid-row-start: 2;
   }
-
-  header{
-    font-size: 1.1rem;
-    height: 10vh;
-
+  .aumentoDer:hover {
+    transform: scale(1.2, 1.2);
   }
+  .aumentoIzq:hover {
+    transform: scale(1.2, 1.2);
+  }
+  header {
+    font-size: 0.9rem;
+    height: 6vh;
+  }
+}
 
+@media only screen and (max-width: 992px) {
+
+  ul.dropdown-menu {
+   padding:0;
+   margin:0;
+   width:100%;
+  }
+}
+
+@media only screen and (min-width:0px) and (max-width: 425px) {
+  .parallax {
+    background-position: center left;
+    background-image: url("../images/image7.jpg");
+    min-height: 300px;
+    max-height: 350px;
+  }
+  header {
+    font-size: 1rem;
+    height: 8vh;
+  }
   footer {
-    height: 10vh;
     font-size: 3rem;
+    height: 8vh;
   }
-
-  .socialMedia i{
+  .sideImage {
+    width: 100%;
+  }
+  .socialMedia i {
     padding-right: 20px;
   }
-
-  .socialMedia span{
+  .socialMedia span {
     display: none;
   }
-  
 }
+
