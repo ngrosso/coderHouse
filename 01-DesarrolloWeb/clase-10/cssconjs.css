@@ -1,0 +1,12 @@
+body{
+  background-color: pink;
+}
+
+main{
+  width: 90%;
+}
+
+.sizeCarrousel{
+  width:500px;
+  margin:0 auto;
+}
