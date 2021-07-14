@@ -1,0 +1,39 @@
+
+$medida: 100px;
+@mixin ejemplo(){
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@for $i from 1 through 6{
+  .col-#{$i}{
+    background: lighten(red, $i*10);
+    width: $medida*0.1*$i;
+    height: $medida*0.1*$i;
+  }  
+}
+
+@for $i from 1 through 3 {
+  .texto-#{$i}{
+    font-size: 1rem*$i;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.col{
+  border: 2px solid black;
+  margin: $medida/10;
+}
+
+.ejemplo1{
+  @include ejemplo;
+}
+
+.ejemplo2{
+  @include ejemplo;
+}
