@@ -1,0 +1,38 @@
+@keyframes backgroundRotation {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.header {
+  .header__title {
+    margin-left: 2rem;
+    font-family: $charm;
+    padding-bottom: 20px;
+    .header__title--animatedText {
+      background: linear-gradient(218deg, #b9559b 20%, $red 40%, $red 60%, #b9559b 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: backgroundRotation 1s linear infinite;
+    }
+  }
+  #navbarText {
+    margin-left: 2rem;
+    li {
+      margin-left: 1.5rem;
+    }
+  }
+  .header__dropdown {
+    margin-right: 2rem;
+    ul {
+      background-color: $vio;
+      li{
+        a {
+          color: $red;
+        }
+      }
+    }
+  }
+}

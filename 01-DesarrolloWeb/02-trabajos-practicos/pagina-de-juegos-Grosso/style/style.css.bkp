@@ -337,7 +337,42 @@ input[type="submit"], #botonDescarga button {
 
 /*Media queries SM*/
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (min-width: 425px) {
+  .parallax {
+    background-position: center left;
+    background-image: url("../images/image7.jpg");
+    min-height: 300px;
+    max-height: 350px;
+  }
+  header {
+    font-size: 1rem;
+    height: 8vh;
+  }
+  footer {
+    font-size: 3rem;
+    height: 8vh;
+  }
+  .sideImage {
+    width: 100%;
+  }
+  .socialMedia i {
+    padding-right: 20px;
+  }
+  .socialMedia span {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  ul.dropdown-menu {
+   padding:0;
+   margin:0;
+   width:100%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
   .parallax {
     background-position: center left;
     min-height: 300px;
@@ -366,39 +401,3 @@ input[type="submit"], #botonDescarga button {
     height: 6vh;
   }
 }
-
-@media only screen and (max-width: 992px) {
-
-  ul.dropdown-menu {
-   padding:0;
-   margin:0;
-   width:100%;
-  }
-}
-
-@media only screen and (min-width:0px) and (max-width: 425px) {
-  .parallax {
-    background-position: center left;
-    background-image: url("../images/image7.jpg");
-    min-height: 300px;
-    max-height: 350px;
-  }
-  header {
-    font-size: 1rem;
-    height: 8vh;
-  }
-  footer {
-    font-size: 3rem;
-    height: 8vh;
-  }
-  .sideImage {
-    width: 100%;
-  }
-  .socialMedia i {
-    padding-right: 20px;
-  }
-  .socialMedia span {
-    display: none;
-  }
-}
-

@@ -1,0 +1,58 @@
+.contact {
+  text-align: center;
+  max-width: 90%;
+  margin: 20px auto;
+  color: $white;
+  .contact__subtitle {
+    font-family: $grot;
+    padding: 15px 0 5px 0;
+  }
+  .contact__form {
+    font-family: $lato;
+    display: grid;
+    grid-template-areas:
+      "contact comments"
+      "contact button";
+    grid-template-rows: 12em 4em;
+    grid-template-columns: 20em 1fr;
+    grid-gap: 0.8em;
+    background: $dvio;
+    padding: 1.2em;
+    label {
+      grid-area: labels;
+      color: $white;
+    }
+    .contact__details {
+      grid-area: contact;
+      input,select {
+        grid-area: contact;
+        width: 100%;
+        padding: 5px;
+        border: none;
+        margin-bottom: 1em;
+      }
+    }
+    .contact__message {
+      grid-area: comments;
+      textarea {
+        max-height: 80%;
+        width: 100%;
+        border: none;
+      }
+      input[type="submit"] {
+        grid-area: button;
+        border: 0;
+        background: gray;
+        color: white;
+      }
+    }
+    @include media-up(sm){
+      grid-template-rows: repeat(2,1fr) 4rem;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "contact"
+      "comments" 
+      "button";
+    }
+  }
+}

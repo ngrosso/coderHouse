@@ -1,0 +1,73 @@
+.information {
+  text-align: center;
+  max-width: 90%;
+  margin: 20px auto;
+  color: $white;
+  .information__display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    @include media-up(lg) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      gap: 20px;
+    }
+    .information__subtitle {
+      font-family: $grot;
+      padding: 15px 0 5px 0;
+    }
+    .information__sideImage {
+      grid-area: imagen;
+      grid-row-start: 1;
+      max-width: 700px;
+      @include media-up(sm) {
+        width: 100%;
+      }
+    }
+    .information__scale {
+      transition: all 1s ease-in-out;
+    }
+    .information__scale:hover {
+      border: 2px solid $red;
+      transition: all 1s ease-in-out;
+    }
+    .information__scale--right:hover {
+      transform: translate(50%, 0%) scale(1.5, 1.5);
+      @include media-up(lg){
+        transform: none;
+      }
+    }
+    .information__scale--left:hover {
+      transform: translate(-50%, 0%) scale(1.5, 1.5);
+      @include media-up(lg){
+        transform: none;
+      }
+    }
+  }
+  .information__image--left {
+    grid-template-areas: "imagen texto";
+    @include media-up(lg) {
+      grid-template-areas: "imagen" "texto";
+    }
+  }
+  .information__image--right {
+    grid-template-areas: "texto imagen";
+    @include media-up(lg) {
+      grid-template-areas: "imagen" "texto";
+    }
+  }
+  .information__sideArticle {
+    grid-area: texto;
+    grid-row-start: 1;
+    align-self: center;
+    @include media-up(lg) {
+      grid-row-start: 2;
+    }
+    .information__paragraph {
+      font-family: $lato;
+      list-style: none;
+    }
+  }
+}

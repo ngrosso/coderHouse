@@ -9,22 +9,22 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/css/style.css">
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
   <title>Final Legends</title>
 
 </head>
 
 <body>
-  <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <h1 class="pt-3"><a href="index.html" class="animatedText">Final Legends</a></h1>
+        <h1 class="header__title pt-3"><a href="index.html" class="header__title--animatedText">Final Legends</a></h1>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
+        <div class="collapse navbar-collapse header__links" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a href="informacion.html" class="nav-link">Informacion</a>
@@ -36,8 +36,9 @@
               <a href="contacto.html" class="nav-link">Contacto</a>
             </li>
           </ul>
-          <div class="dropdown">
-            <a class="btn dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="dropdown header__dropdown">
+            <a class="btn dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink"
+              data-bs-toggle="dropdown" aria-expanded="false">
               Cuenta
             </a>
             <ul class="dropdown-menu listBgColor" aria-labelledby="dropdownMenuLink">
@@ -81,65 +82,62 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-  </main>
-  </section>
-  <section>
-    <div class="centerSection displayInfo imagenIzq">
-      <div>
-        <h2>Subtitulo del juego</h2>
-        <img src="./images/image4.jpg" alt="imagen del juego 4" class="sideImage aumento aumentoDer">
+    </section>
+    <section class="information">
+      <div class="information__display information__image--left">
+        <div>
+          <h2 class="information__subtitle">Subtitulo del juego</h2>
+          <img src="./images/image4.jpg" alt="imagen del juego 4" class="information__sideImage information__scale information__scale--right">
+        </div>
+        <article class="information__sideArticle">
+          <p class="information__paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
+            nesciunt, minus amet odit laudantium
+            architecto porro iusto nihil quaerat cumque a? Reprehenderit minima facilis maiores aut autem debitis ullam
+            sit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad reprehenderit asperiores similique beatae
+            illo aut numquam voluptates deleniti explicabo commodi, nemo sit omnis architecto? Provident dolorum
+            possimus omnis minima laborum?
+          </p>
+        </article>
       </div>
-      <article class="sideArticle">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nesciunt, minus amet odit laudantium
-          architecto porro iusto nihil quaerat cumque a? Reprehenderit minima facilis maiores aut autem debitis ullam
-          sit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad reprehenderit asperiores similique beatae
-          illo aut numquam voluptates deleniti explicabo commodi, nemo sit omnis architecto? Provident dolorum
-          possimus omnis minima laborum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam sed
-          doloremque quo quaerat nostrum ipsum, unde pariatur illum dolore magnam facilis repellendus enim non rerum
-          doloribus quam, odio aut magni.
-        </p>
-      </article>
+    </section>
+    <div class="w-100">
+      <div class="parallax"></div>
     </div>
-  </section>
-  <div class="w-100">
-    <div class="parallax"></div>
-  </div>
-  <section>
-    <div class="centerSection displayInfo imagenDer">
-      <article class="sideArticle">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nostrum iste odio rerum quas.
-          Molestias
-          laboriosam recusandae nobis ab, quod est. Eius labore quod beatae magni, reiciendis omnis explicabo maiores?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium hic perspiciatis officia alias
-          eos unde optio ea veniam odio. Obcaecati sed accusantium quisquam enim pariatur libero deserunt cupiditate
-          repudiandae.
-          Doloribus, nemo commodi. Similique neque eaque ea totam illum molestias! Quae temporibus, nesciunt placeat
-          officiis impedit deleniti quis voluptas et dolore voluptatem nam distinctio illum omnis similique. Modi,
-          dicta facilis?
-        </p>
-      </article>
-      <div>
-        <img src="./images/image5.jpg" alt="imagen del juego 5" class="sideImage aumento aumentoIzq">
+    <section class="information">
+      <div class=" information__display information__image--right">
+        <article class="information__sideArticle">
+          <p class="information__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+            nostrum iste odio rerum quas.
+            Molestias
+            laboriosam recusandae nobis ab, quod est. Eius labore quod beatae magni, reiciendis omnis explicabo maiores?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium hic perspiciatis officia alias
+            eos unde optio ea veniam odio. Obcaecati sed accusantium quisquam enim pariatur libero deserunt cupiditate
+            repudiandae.
+          </p>
+        </article>
+        <div>
+          <img src="./images/image5.jpg" alt="imagen del juego 5" class="information__sideImage information__scale information__scale--left">
+        </div>
       </div>
+    </section>
+    <div id="botonDescarga">
+      <button>Descarga el juego</button>
     </div>
-  </section>
-  <div id="botonDescarga">
-    <button>Descarga del juego</button>
-  </div>
   </main>
-  <footer>
-    <div class="logoEmpresa">
+  <footer class="footer">
+    <div class="footer__logoEmpresa">
       <img src="./images/square-enix-logo-vector.svg" alt="Logo de la empresa del juego">
     </div>
-    <div class="socialMedia">
+    <div class="footer__socialMedia">
       <ul>
-        <li><a href="https//www.youtube.com.ar" target="_blank"><i class="fab fa-youtube"></i><span>Youtube</span></a>
+        <li><a href="https://www.youtube.com.ar" target="_blank"><i class="fab fa-youtube"></i><span>Youtube</span></a>
         </li>
-        <li><a href="https//www.instagram.com" target="_blank"><i
+        <li><a href="https://www.instagram.com" target="_blank"><i
               class="fab fa-instagram"></i><span>Instagram</span></a></li>
-        <li><a href="https//www.twitch.tv" target="_blank"><i class="fab fa-twitch"></i><span>Twitch</span></a></li>
+        <li><a href="https://www.twitch.tv" target="_blank"><i class="fab fa-twitch"></i><span>Twitch</span></a></li>
       </ul>
     </div>
+    </main>
   </footer>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -1,0 +1,17 @@
+table{
+  border: 2px solid $dred;
+  display: inline-block;
+  font-family: $lato;
+  th{
+    padding:10px 20px;
+    color: $red;
+    font-weight: bold;
+    border: 3px dashed $dred;
+    
+  }
+  td{
+    color: $red;
+    font-weight: normal;
+    border: 2px solid $dred;
+  }
+}

@@ -1,0 +1,54 @@
+.footer {
+  background-color: $vio;
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  padding: 1.5vh;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  align-items: center;
+  .footer__logoEmpresa {
+    display: inline;
+    img {
+      width: 200px;
+      @include media-up(ssm){
+        width: 160px;
+      }
+    }
+  }
+  .footer__socialMedia {
+    position: fixed;
+    right: 2%;
+    display: inline-block;
+    li {
+      display: inline;
+      padding-right: 10px;
+      a {
+        color: $red;
+        text-decoration: none;
+      }
+      a:hover {
+        background: linear-gradient(218deg, #b9559b 20%, $red 40%, $red 60%, #b9559b 80%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% auto;
+        animation: backgroundRotation 1s linear infinite;
+      }
+      i {
+        padding-right: 5px;
+      }
+    }
+    @include media-up(sm) {
+      i {
+        padding-right: 20px;
+        padding-top: 5px;
+        font-size: 1.2rem;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}
