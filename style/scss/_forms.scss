@@ -17,19 +17,20 @@
     grid-template-columns: 20em 1fr;
     grid-gap: 0.8em;
     background: $dvio;
-    padding: 1.2em;
+    padding: 1.2em;;
     label {
       grid-area: labels;
       color: $white;
     }
     .contact__details {
       grid-area: contact;
-      input,select {
-        grid-area: contact;
+      input,
+      select {
         width: 100%;
         padding: 5px;
         border: none;
         margin-bottom: 1em;
+        background-color: $white;
       }
     }
     .contact__message {
@@ -38,21 +39,86 @@
         max-height: 80%;
         width: 100%;
         border: none;
+        background-color: $white;
       }
       input[type="submit"] {
-        grid-area: button;
-        border: 0;
-        background: gray;
-        color: white;
+        grid-column: button;
+        font-size: 2rem;
+        font-family: $cav;
+        background-color: $vio;
+        border: 5px $red ridge;
+        color: $white;
+      }
+      input[type="submit"]:hover {
+        background-color: $red;
+        border-color: $dred;
+        color:black;
       }
     }
-    @include media-up(sm){
-      grid-template-rows: repeat(2,1fr) 4rem;
+    @include media-up(sm) {
+      grid-template-rows: repeat(2, 1fr) 4rem;
       grid-template-columns: 1fr;
       grid-template-areas:
-      "contact"
-      "comments" 
-      "button";
+        "contact"
+        "comments"
+        "button";
     }
   }
+}
+
+.login {
+  text-align: center;
+  max-width: 40%;
+  margin: 0px auto;
+  color: $white;
+  .login__subtitle {
+    font-family: $grot;
+    padding: 15px 0 5px 0;
+  }
+  .login__form {
+    display: grid;
+    grid-template-areas: "labels controls" "button button";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1.5fr;
+    grid-auto-flow: row;
+    grid-gap: 1em;
+    background: $vio;
+    padding: 1.2em;
+    font-family: $lato;
+    label {
+      grid-column: labels;
+      grid-row: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $red;
+    }
+    input[type="email"],
+    input[type="password"],
+    input[type="checkbox"] {
+      grid-column: controls;
+      background-color: $white;
+      grid-row: auto;
+      border: none;
+      padding: 0.5em;
+    }
+    input[type="submit"] {
+      grid-column: button;
+      font-size: 2rem;
+      font-family: $cav;
+      background-color: $vio;
+      border: 5px $red ridge;
+      color: $white;
+    }
+    input[type="submit"]:hover {
+      background-color: $red;
+      border-color: $dred;
+      color:black;
+    }
+  }
+  @include media-up(sm) {
+    max-width: 100%;
+
+  }
+
 }

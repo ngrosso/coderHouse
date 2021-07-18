@@ -19,7 +19,7 @@
   background-color: $vio;
 }
 
-h1{
+h1 {
   margin-bottom: 0;
 }
 
@@ -40,7 +40,9 @@ h1{
   }
 }
 
-dl, ol, ul{
+dl,
+ol,
+ul {
   margin-bottom: 0px;
 }
 
@@ -64,9 +66,17 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: 100%;
-  @include media-up(sm){
+  @include media-up(sm) {
     background-position: 25% 75%;
   }
+}
+
+.grotFont {
+  font-family: $grot;
+}
+
+.latoFont{
+  font-family: $lato;
 }
 
 #botonDescarga {
@@ -76,7 +86,7 @@ body {
   height: 3rem;
   font-family: $cav;
   font-size: 2rem;
-  button{
+  button {
     width: 50%;
     height: 100px;
     margin: auto 25%;

@@ -92,6 +92,8 @@ table td {
 }
 
 .contact .contact__form label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: labels;
   color: #eeebdd;
 }
@@ -103,15 +105,13 @@ table td {
   grid-area: contact;
 }
 
-.contact .contact__form .contact__details input, .contact .contact__form .contact__details select {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: contact;
+.contact .contact__form .contact__details input,
+.contact .contact__form .contact__details select {
   width: 100%;
   padding: 5px;
   border: none;
   margin-bottom: 1em;
+  background-color: #eeebdd;
 }
 
 .contact .contact__form .contact__message {
@@ -124,15 +124,22 @@ table td {
   max-height: 80%;
   width: 100%;
   border: none;
+  background-color: #eeebdd;
 }
 
 .contact .contact__form .contact__message input[type="submit"] {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: button;
-  border: 0;
-  background: gray;
-  color: white;
+  grid-column: button;
+  font-size: 2rem;
+  font-family: "Caveat", cursive;
+  background-color: #382432;
+  border: 5px #e84545 ridge;
+  color: #eeebdd;
+}
+
+.contact .contact__form .contact__message input[type="submit"]:hover {
+  background-color: #e84545;
+  border-color: #5f232f;
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -141,7 +148,80 @@ table td {
         grid-template-rows: repeat(2, 1fr) 4rem;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "contact" "comments"  "button";
+        grid-template-areas: "contact" "comments" "button";
+  }
+}
+
+.login {
+  text-align: center;
+  max-width: 40%;
+  margin: 0px auto;
+  color: #eeebdd;
+}
+
+.login .login__subtitle {
+  font-family: "Darker Grotesque", sans-serif;
+  padding: 15px 0 5px 0;
+}
+
+.login .login__form {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "labels controls" "button button";
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: 1fr 1fr 1.5fr;
+      grid-template-rows: 1fr 1fr 1.5fr;
+  grid-auto-flow: row;
+  grid-gap: 1em;
+  background: #382432;
+  padding: 1.2em;
+  font-family: "Lato", sans-serif;
+}
+
+.login .login__form label {
+  grid-column: labels;
+  grid-row: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #e84545;
+}
+
+.login .login__form input[type="email"],
+.login .login__form input[type="password"],
+.login .login__form input[type="checkbox"] {
+  grid-column: controls;
+  background-color: #eeebdd;
+  grid-row: auto;
+  border: none;
+  padding: 0.5em;
+}
+
+.login .login__form input[type="submit"] {
+  grid-column: button;
+  font-size: 2rem;
+  font-family: "Caveat", cursive;
+  background-color: #382432;
+  border: 5px #e84545 ridge;
+  color: #eeebdd;
+}
+
+.login .login__form input[type="submit"]:hover {
+  background-color: #e84545;
+  border-color: #5f232f;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .login {
+    max-width: 100%;
   }
 }
 
@@ -379,7 +459,9 @@ h1 {
           animation: backgroundRotation 1s linear infinite;
 }
 
-dl, ol, ul {
+dl,
+ol,
+ul {
   margin-bottom: 0px;
 }
 
@@ -409,6 +491,14 @@ body main {
   .parallax {
     background-position: 25% 75%;
   }
+}
+
+.grotFont {
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.latoFont {
+  font-family: "Lato", sans-serif;
 }
 
 #botonDescarga {
