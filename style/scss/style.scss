@@ -60,6 +60,7 @@ body {
 
 .parallax {
   margin-top: 30px;
+  margin-bottom: 30px;
   min-height: 500px;
   max-height: 600px;
   background-position: center;
@@ -76,6 +77,7 @@ body {
 }
 .parallax__btl{
   background-image: url("../../images/presentacion_personajes.jpg");
+  margin-bottom: 0px;
 }
 
 .grotFont {

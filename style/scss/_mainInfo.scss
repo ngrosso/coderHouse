@@ -1,3 +1,9 @@
+@mixin alignStartOnMediaQuery() {
+  @include media-up(lg){
+    align-self: flex-start;
+  }
+}
+
 .information {
   text-align: center;
   max-width: 90%;
@@ -20,7 +26,6 @@
     }
     .information__sideImage {
       grid-area: imagen;
-      grid-row-start: 1;
       max-width: 700px;
       @include media-up(sm) {
         max-width: 100%;
@@ -60,10 +65,8 @@
   }
   .information__sideArticle {
     grid-area: texto;
-    grid-row-start: 1;
     align-self: center;
     @include media-up(lg) {
-      grid-row-start: 2;
     }
     .information__paragraph {
       font-family: $lato;
@@ -72,7 +75,7 @@
   }
 }
 
-.backgroundLogo{
+.backgroundLogo {
   background-image: url("../../images/final_fantasy_xiv_logo.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -85,67 +88,103 @@
   padding: 20px 10%;
   display: grid;
   color: $white;
-  background-color: rgba(0,0,0,0.5);
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: 5rem repeat(5,1fr);
+  background-color: rgba(0, 0, 0, 0.5);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 5rem repeat(5, 1fr);
   grid-gap: 10px;
-  grid-template-areas:  "title title" 
-                        "dkInfo dkImage" 
-                        "whmImage whmInfo"
-                        "bardInfo bardImage" 
-                        "rdmImage rdmInfo"
-                        "drgInfo drgImage";
-  div,img{
+  grid-template-areas:
+    "title title"
+    "dkInfo dkImage"
+    "whmImage whmInfo"
+    "bardInfo bardImage"
+    "rdmImage rdmInfo"
+    "drgInfo drgImage";
+  @include media-up(lg) {
+    display: grid;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem repeat(10, 35em);
+    grid-template-areas:
+      "title"
+      "dkInfo"
+      "dkImage"
+      "whmInfo"
+      "whmImage"
+      "bardInfo"
+      "bardImage"
+      "rdmInfo"
+      "rdmImage"
+      "drgInfo"
+      "drgImage";
+  }
+  div,
+  img {
     align-self: center;
     justify-self: center;
   }
   .images {
-   max-height: 600px;
-  }
-  .jobIcons{
-    width: 50px;
-    margin-right:10px;
-  }
-  .character__subtitle{
-    grid-area:title;
-    font-family: $grot;
+    max-height: 80%;
+    max-width: 80%;
     align-self: center;
     justify-self: center;
   }
-  .character__info{
-    width:70%;
+  .jobIcons {
+    max-width: 50px;
+    margin-right: 10px;
   }
-  .character__title{
-    font-family: $cav;
+  .character__subtitle {
+    grid-area: title;
+    font-family: $grot;
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
+  }
+  .character__info {
+    max-width: 70%;
+    .character__name{
+      font-family: $cav;
+      font-size: 2rem;
+    }
+    p {
+      margin: 0;
+    }
+    @include media-up(lg) {
+      max-width: 90%;
+    }
   }
   .character__dkInfo {
     grid-area: dkInfo;
   }
   .character__dkImage {
     grid-area: dkImage;
+    @include alignStartOnMediaQuery();
   }
   .character__whmInfo {
     grid-area: whmInfo;
   }
   .character__whmImage {
     grid-area: whmImage;
+    @include alignStartOnMediaQuery();
   }
   .character__bardInfo {
     grid-area: bardInfo;
   }
   .character__bardImage {
     grid-area: bardImage;
+    @include alignStartOnMediaQuery();
   }
   .character__rdmInfo {
     grid-area: rdmInfo;
   }
   .character__rdmImage {
     grid-area: rdmImage;
+    @include alignStartOnMediaQuery();
   }
   .character__drgInfo {
     grid-area: drgInfo;
   }
   .character__drgImage {
     grid-area: drgImage;
+    @include alignStartOnMediaQuery();
   }
 }
