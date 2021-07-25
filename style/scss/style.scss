@@ -5,6 +5,8 @@
 @import "tables";
 @import "forms";
 @import "mainInfo";
+@import "informationDetails";
+@import "downloadPage";
 @import "footer";
 
 * {
@@ -51,14 +53,13 @@ ul {
 body {
   background-color: $dvio;
   main {
-    margin: 90px 0px 70px 0px;
+    margin: 7vh 0px 7vh 0px;
     padding: 10px 0px 10px 0px;
   }
 }
 
 .parallax {
   margin-top: 30px;
-  background-image: url("../../images/primer_plano_guerrero_de_la_luz.jpg");
   min-height: 500px;
   max-height: 600px;
   background-position: center;
@@ -66,9 +67,15 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: 100%;
+}
+.parallax__wol{
+  background-image: url("../../images/primer_plano_guerrero_de_la_luz.jpg");
   @include media-up(sm) {
     background-position: 25% 75%;
   }
+}
+.parallax__btl{
+  background-image: url("../../images/presentacion_personajes.jpg");
 }
 
 .grotFont {

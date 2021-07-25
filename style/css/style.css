@@ -228,7 +228,7 @@ table td {
 .information {
   text-align: center;
   max-width: 90%;
-  margin: 20px auto;
+  margin: 0 20px auto;
   color: #eeebdd;
 }
 
@@ -269,7 +269,7 @@ table td {
 
 @media screen and (max-width: 768px) {
   .information .information__display .information__sideImage {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -348,6 +348,159 @@ table td {
 .information .information__sideArticle .information__paragraph {
   font-family: "Lato", sans-serif;
   list-style: none;
+}
+
+.backgroundLogo {
+  background-image: url("../../images/final_fantasy_xiv_logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.character {
+  max-width: 100%;
+  padding: 20px 10%;
+  display: -ms-grid;
+  display: grid;
+  color: #eeebdd;
+  background-color: rgba(0, 0, 0, 0.5);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 5rem (1fr)[5];
+      grid-template-rows: 5rem repeat(5, 1fr);
+  grid-gap: 10px;
+      grid-template-areas: "title title"  "dkInfo dkImage"  "whmImage whmInfo" "bardInfo bardImage"  "rdmImage rdmInfo" "drgInfo drgImage";
+}
+
+.character div, .character img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.character .images {
+  max-height: 600px;
+}
+
+.character .jobIcons {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.character .character__subtitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+  font-family: "Darker Grotesque", sans-serif;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.character .character__info {
+  width: 70%;
+}
+
+.character .character__title {
+  font-family: "Caveat", cursive;
+}
+
+.character .character__dkInfo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: dkInfo;
+}
+
+.character .character__dkImage {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: dkImage;
+}
+
+.character .character__whmInfo {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: whmInfo;
+}
+
+.character .character__whmImage {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: whmImage;
+}
+
+.character .character__bardInfo {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: bardInfo;
+}
+
+.character .character__bardImage {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: bardImage;
+}
+
+.character .character__rdmInfo {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: rdmInfo;
+}
+
+.character .character__rdmImage {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: rdmImage;
+}
+
+.character .character__drgInfo {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: drgInfo;
+}
+
+.character .character__drgImage {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: drgImage;
+}
+
+.downloadInfo {
+  text-align: center;
+  max-width: 90%;
+  margin: 20px auto;
+  color: #eeebdd;
+  font-family: "Lato", sans-serif;
+}
+
+.downloadInfo .downloadInfo__subtitle {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 2.5rem;
+}
+
+.downloadInfo .downloadInfo__alternativeLink a {
+  color: #e84545;
+  text-decoration: none;
+}
+
+.downloadInfo .downloadInfo__installationSteps li {
+  text-align: start;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.downloadInfo .downloadInfo__installationSteps li p {
+  margin: 0;
+}
+
+.downloadInfo .downloadInfo__installationSteps code {
+  font-size: 1rem;
 }
 
 .footer {
@@ -471,13 +624,12 @@ body {
 }
 
 body main {
-  margin: 90px 0px 70px 0px;
+  margin: 7vh 0px 7vh 0px;
   padding: 10px 0px 10px 0px;
 }
 
 .parallax {
   margin-top: 30px;
-  background-image: url("../../images/primer_plano_guerrero_de_la_luz.jpg");
   min-height: 500px;
   max-height: 600px;
   background-position: center;
@@ -487,10 +639,18 @@ body main {
   width: 100%;
 }
 
+.parallax__wol {
+  background-image: url("../../images/primer_plano_guerrero_de_la_luz.jpg");
+}
+
 @media screen and (max-width: 768px) {
-  .parallax {
+  .parallax__wol {
     background-position: 25% 75%;
   }
+}
+
+.parallax__btl {
+  background-image: url("../../images/presentacion_personajes.jpg");
 }
 
 .grotFont {

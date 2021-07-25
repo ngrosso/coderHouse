@@ -1,7 +1,7 @@
 .information {
   text-align: center;
   max-width: 90%;
-  margin: 20px auto;
+  margin: 0 20px auto;
   color: $white;
   .information__display {
     display: grid;
@@ -23,7 +23,7 @@
       grid-row-start: 1;
       max-width: 700px;
       @include media-up(sm) {
-        width: 100%;
+        max-width: 100%;
       }
     }
     .information__scale {
@@ -35,13 +35,13 @@
     }
     .information__scale--right:hover {
       transform: translate(50%, 0%) scale(1.5, 1.5);
-      @include media-up(lg){
+      @include media-up(lg) {
         transform: none;
       }
     }
     .information__scale--left:hover {
       transform: translate(-50%, 0%) scale(1.5, 1.5);
-      @include media-up(lg){
+      @include media-up(lg) {
         transform: none;
       }
     }
@@ -69,5 +69,83 @@
       font-family: $lato;
       list-style: none;
     }
+  }
+}
+
+.backgroundLogo{
+  background-image: url("../../images/final_fantasy_xiv_logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.character {
+  max-width: 100%;
+  padding: 20px 10%;
+  display: grid;
+  color: $white;
+  background-color: rgba(0,0,0,0.5);
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 5rem repeat(5,1fr);
+  grid-gap: 10px;
+  grid-template-areas:  "title title" 
+                        "dkInfo dkImage" 
+                        "whmImage whmInfo"
+                        "bardInfo bardImage" 
+                        "rdmImage rdmInfo"
+                        "drgInfo drgImage";
+  div,img{
+    align-self: center;
+    justify-self: center;
+  }
+  .images {
+   max-height: 600px;
+  }
+  .jobIcons{
+    width: 50px;
+    margin-right:10px;
+  }
+  .character__subtitle{
+    grid-area:title;
+    font-family: $grot;
+    align-self: center;
+    justify-self: center;
+  }
+  .character__info{
+    width:70%;
+  }
+  .character__title{
+    font-family: $cav;
+  }
+  .character__dkInfo {
+    grid-area: dkInfo;
+  }
+  .character__dkImage {
+    grid-area: dkImage;
+  }
+  .character__whmInfo {
+    grid-area: whmInfo;
+  }
+  .character__whmImage {
+    grid-area: whmImage;
+  }
+  .character__bardInfo {
+    grid-area: bardInfo;
+  }
+  .character__bardImage {
+    grid-area: bardImage;
+  }
+  .character__rdmInfo {
+    grid-area: rdmInfo;
+  }
+  .character__rdmImage {
+    grid-area: rdmImage;
+  }
+  .character__drgInfo {
+    grid-area: drgInfo;
+  }
+  .character__drgImage {
+    grid-area: drgImage;
   }
 }
