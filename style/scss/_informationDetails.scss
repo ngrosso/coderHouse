@@ -32,7 +32,7 @@
 
     @include media-up(sm){
       display: inline-grid;
-      grid-template-columns: 5rem 1fr;
+      grid-template-columns: 15rem 1fr;
       grid-template-rows: repeat(3,15rem 1fr 20rem);
       grid-template-areas:       
       "gridaniaFlag gridaniaInfo"
@@ -53,15 +53,16 @@
       }
       @include media-up(ssm){
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr 15rem 10rem);
         grid-template-areas:
-        "gridaniaFlag"
         "gridaniaInfo"
+        "gridaniaFlag"
         "gridaniaCity"
-        "limnsaFlag"
         "limnsaInfo"
+        "limnsaFlag"
         "limnsaCity"
-        "uldahFlag"
         "uldahInfo"
+        "uldahFlag"
         "uldahCity";
       }
     }
@@ -94,6 +95,9 @@
     .introduction__gridaniaFlag {
       grid-area: gridaniaFlag;
       justify-self: flex-end;
+      @include media-up(ssm){
+        justify-self: center;
+      };
     }
     .introduction__gridaniaInfo {
       grid-area: gridaniaInfo;
@@ -107,6 +111,9 @@
     .introduction__limnsaFlag {
       grid-area: limnsaFlag;
       justify-self: flex-end;
+      @include media-up(ssm){
+        justify-self: center;
+      };
     }
     .introduction__limnsaInfo {
       grid-area: limnsaInfo;
@@ -120,6 +127,9 @@
     .introduction__uldahFlag {
       grid-area: uldahFlag;
       justify-self: flex-end;
+      @include media-up(ssm){
+        justify-self: center;
+      };
     }
     .introduction__uldahInfo {
       grid-area: uldahInfo;

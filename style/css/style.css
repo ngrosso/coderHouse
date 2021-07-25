@@ -614,8 +614,8 @@ table td {
   .introduction .introduction__cities {
     display: -ms-inline-grid;
     display: inline-grid;
-    -ms-grid-columns: 5rem 1fr;
-        grid-template-columns: 5rem 1fr;
+    -ms-grid-columns: 15rem 1fr;
+        grid-template-columns: 15rem 1fr;
     -ms-grid-rows: (15rem 1fr 20rem)[3];
         grid-template-rows: repeat(3, 15rem 1fr 20rem);
         grid-template-areas: "gridaniaFlag gridaniaInfo" "... gridaniaInfo" "gridaniaCity gridaniaCity" "limnsaFlag limnsaInfo" "... limnsaInfo" "limnsaCity limnsaCity" "uldahFlag uldahInfo" "... uldahInfo" "uldahCity uldahCity";
@@ -631,7 +631,9 @@ table td {
   .introduction .introduction__cities {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "gridaniaFlag" "gridaniaInfo" "gridaniaCity" "limnsaFlag" "limnsaInfo" "limnsaCity" "uldahFlag" "uldahInfo" "uldahCity";
+    -ms-grid-rows: (1fr 15rem 10rem)[3];
+        grid-template-rows: repeat(3, 1fr 15rem 10rem);
+        grid-template-areas: "gridaniaInfo" "gridaniaFlag" "gridaniaCity" "limnsaInfo" "limnsaFlag" "limnsaCity" "uldahInfo" "uldahFlag" "uldahCity";
   }
 }
 
@@ -686,6 +688,13 @@ table td {
   justify-self: flex-end;
 }
 
+@media screen and (max-width: 425px) {
+  .introduction .introduction__cities .introduction__gridaniaFlag {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 .introduction .introduction__cities .introduction__gridaniaInfo {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -713,6 +722,13 @@ table td {
   justify-self: flex-end;
 }
 
+@media screen and (max-width: 425px) {
+  .introduction .introduction__cities .introduction__limnsaFlag {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 .introduction .introduction__cities .introduction__limnsaInfo {
   -ms-grid-row: 4;
   -ms-grid-row-span: 2;
@@ -738,6 +754,13 @@ table td {
   -ms-grid-column: 1;
   grid-area: uldahFlag;
   justify-self: flex-end;
+}
+
+@media screen and (max-width: 425px) {
+  .introduction .introduction__cities .introduction__uldahFlag {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 
 .introduction .introduction__cities .introduction__uldahInfo {
