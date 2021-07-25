@@ -377,6 +377,13 @@ table td {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .character {
+    -ms-grid-rows: 5rem (1fr)[10];
+        grid-template-rows: 5rem repeat(10, 1fr);
+  }
+}
+
 .character div,
 .character img {
   -ms-flex-item-align: center;
@@ -453,6 +460,14 @@ table td {
   }
 }
 
+@media screen and (max-width: 425px) {
+  .character .character__dkImage {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 .character .character__whmInfo {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
@@ -469,6 +484,14 @@ table td {
   .character .character__whmImage {
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .character .character__whmImage {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
@@ -491,6 +514,14 @@ table td {
   }
 }
 
+@media screen and (max-width: 425px) {
+  .character .character__bardImage {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 .character .character__rdmInfo {
   -ms-grid-row: 5;
   -ms-grid-column: 2;
@@ -507,6 +538,14 @@ table td {
   .character .character__rdmImage {
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .character .character__rdmImage {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
@@ -527,6 +566,205 @@ table td {
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
+}
+
+@media screen and (max-width: 425px) {
+  .character .character__drgImage {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.introduction {
+  text-align: center;
+  margin: 0px auto 20px;
+  padding: 20px 10% 20px;
+  color: #eeebdd;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+  .introduction {
+    padding: 0px 10px 20px;
+  }
+}
+
+.introduction .introduction__title {
+  padding-top: 20px;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.introduction .introduction__content {
+  font-family: "Lato", sans-serif;
+}
+
+.introduction .introduction__cities {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: 20rem 1fr;
+      grid-template-columns: 20rem 1fr;
+  -ms-grid-rows: (1fr 1fr 35rem)[3];
+      grid-template-rows: repeat(3, 1fr 1fr 35rem);
+  grid-gap: 10px 20px;
+      grid-template-areas: "gridaniaFlag gridaniaInfo" "gridaniaFlag gridaniaInfo" "gridaniaCity gridaniaCity" "limnsaFlag limnsaInfo" "limnsaFlag limnsaInfo" "limnsaCity limnsaCity" "uldahFlag uldahInfo" "uldahFlag uldahInfo" "uldahCity uldahCity";
+}
+
+@media screen and (max-width: 768px) {
+  .introduction .introduction__cities {
+    display: -ms-inline-grid;
+    display: inline-grid;
+    -ms-grid-columns: 5rem 1fr;
+        grid-template-columns: 5rem 1fr;
+    -ms-grid-rows: (15rem 1fr 20rem)[3];
+        grid-template-rows: repeat(3, 15rem 1fr 20rem);
+        grid-template-areas: "gridaniaFlag gridaniaInfo" "... gridaniaInfo" "gridaniaCity gridaniaCity" "limnsaFlag limnsaInfo" "... limnsaInfo" "limnsaCity limnsaCity" "uldahFlag uldahInfo" "... uldahInfo" "uldahCity uldahCity";
+  }
+  .introduction .introduction__cities .introduction__gridaniaFlag img,
+  .introduction .introduction__cities .introduction__limnsaFlag img,
+  .introduction .introduction__cities .introduction__uldahFlag img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-width: 425px) {
+  .introduction .introduction__cities {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "gridaniaFlag" "gridaniaInfo" "gridaniaCity" "limnsaFlag" "limnsaInfo" "limnsaCity" "uldahFlag" "uldahInfo" "uldahCity";
+  }
+}
+
+.introduction .introduction__cities .images {
+  max-height: 70%;
+  max-width: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .introduction .introduction__cities .images {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .introduction .introduction__cities .images {
+    max-width: 100%;
+  }
+}
+
+.introduction .introduction__cities .introduction__info {
+  text-align: justify;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 70%;
+}
+
+@media screen and (max-width: 425px) {
+  .introduction .introduction__cities .introduction__info {
+    max-width: 85%;
+  }
+}
+
+.introduction .introduction__cities .introduction__info .introduction__info__title {
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+}
+
+.introduction .introduction__cities .introduction__gridaniaFlag {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: gridaniaFlag;
+  justify-self: flex-end;
+}
+
+.introduction .introduction__cities .introduction__gridaniaInfo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: gridaniaInfo;
+}
+
+.introduction .introduction__cities .introduction__gridaniaCity {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: gridaniaCity;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 30px;
+}
+
+.introduction .introduction__cities .introduction__limnsaFlag {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: limnsaFlag;
+  justify-self: flex-end;
+}
+
+.introduction .introduction__cities .introduction__limnsaInfo {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: limnsaInfo;
+}
+
+.introduction .introduction__cities .introduction__limnsaCity {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: limnsaCity;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 30px;
+}
+
+.introduction .introduction__cities .introduction__uldahFlag {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: uldahFlag;
+  justify-self: flex-end;
+}
+
+.introduction .introduction__cities .introduction__uldahInfo {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: uldahInfo;
+}
+
+.introduction .introduction__cities .introduction__uldahCity {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: uldahCity;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 30px;
+}
+
+.mapBackground {
+  background-image: url("../../images/eorzea_mapa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .downloadInfo {
@@ -585,7 +823,7 @@ table td {
   width: 200px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
   .footer .footer__logoEmpresa img {
     width: 160px;
   }

@@ -2,6 +2,9 @@
   @include media-up(lg){
     align-self: flex-start;
   }
+  @include media-up(ssm){
+    align-self: center;
+  }
 }
 
 .information {
@@ -116,6 +119,9 @@
       "rdmImage"
       "drgInfo"
       "drgImage";
+  }
+  @include media-up(sm) {
+    grid-template-rows: 5rem repeat(10, 1fr);
   }
   div,
   img {

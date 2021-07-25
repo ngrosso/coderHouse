@@ -1,0 +1,142 @@
+.introduction {
+  text-align: center;
+  margin: 0px auto 20px;
+  padding: 20px 10% 20px;
+  color: $white;
+  background-color: rgba(0, 0, 0, 0.7);
+  @include media-up(sm){
+    padding: 0px 10px 20px;
+  }
+  .introduction__title {
+    padding-top: 20px;
+    font-family: $grot;
+  }
+  .introduction__content {
+    font-family: $lato;
+  }
+  .introduction__cities {
+    display: inline-grid;
+    grid-template-columns: 20rem 1fr;
+    grid-template-rows: repeat(3,1fr 1fr 35rem);
+    grid-gap: 10px 20px;
+    grid-template-areas:
+      "gridaniaFlag gridaniaInfo"
+      "gridaniaFlag gridaniaInfo"
+      "gridaniaCity gridaniaCity"
+      "limnsaFlag limnsaInfo"
+      "limnsaFlag limnsaInfo"
+      "limnsaCity limnsaCity"
+      "uldahFlag uldahInfo"
+      "uldahFlag uldahInfo"
+      "uldahCity uldahCity";
+
+    @include media-up(sm){
+      display: inline-grid;
+      grid-template-columns: 5rem 1fr;
+      grid-template-rows: repeat(3,15rem 1fr 20rem);
+      grid-template-areas:       
+      "gridaniaFlag gridaniaInfo"
+      "... gridaniaInfo"
+      "gridaniaCity gridaniaCity"
+      "limnsaFlag limnsaInfo"
+      "... limnsaInfo"
+      "limnsaCity limnsaCity"
+      "uldahFlag uldahInfo"
+      "... uldahInfo"
+      "uldahCity uldahCity";
+      .introduction__gridaniaFlag,
+      .introduction__limnsaFlag,
+      .introduction__uldahFlag {
+        img {
+          max-width: 100%;
+        }
+      }
+      @include media-up(ssm){
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "gridaniaFlag"
+        "gridaniaInfo"
+        "gridaniaCity"
+        "limnsaFlag"
+        "limnsaInfo"
+        "limnsaCity"
+        "uldahFlag"
+        "uldahInfo"
+        "uldahCity";
+      }
+    }
+    .images {
+      max-height: 70%;
+      max-width: 80%;
+      align-self: center;
+      justify-self: center;
+      @include media-up(sm){
+        max-width: 100%;
+      }
+      @include media-up(ssm){
+        max-width: 100%;
+      }
+    }
+
+    .introduction__info {
+      text-align: justify;
+      align-self: center;
+      justify-self: center;
+      max-width: 70%;
+      @include media-up(ssm){
+        max-width: 85%;
+      }
+      .introduction__info__title {
+        font-family: $cav;
+        font-size: 3rem;
+      }
+    }
+    .introduction__gridaniaFlag {
+      grid-area: gridaniaFlag;
+      justify-self: flex-end;
+    }
+    .introduction__gridaniaInfo {
+      grid-area: gridaniaInfo;
+    }
+    .introduction__gridaniaCity {
+      grid-area: gridaniaCity;
+      justify-self: center;
+      align-self: flex-start;
+      margin-bottom: 30px;
+    }
+    .introduction__limnsaFlag {
+      grid-area: limnsaFlag;
+      justify-self: flex-end;
+    }
+    .introduction__limnsaInfo {
+      grid-area: limnsaInfo;
+    }
+    .introduction__limnsaCity {
+      grid-area: limnsaCity;
+      justify-self: center;
+      align-self: flex-start;
+      margin-bottom: 30px;
+    }
+    .introduction__uldahFlag {
+      grid-area: uldahFlag;
+      justify-self: flex-end;
+    }
+    .introduction__uldahInfo {
+      grid-area: uldahInfo;
+    }
+    .introduction__uldahCity {
+      grid-area: uldahCity;
+      justify-self: center;
+      align-self: flex-start;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.mapBackground {
+  background-image: url("../../images/eorzea_mapa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
