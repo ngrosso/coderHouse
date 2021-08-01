@@ -460,7 +460,7 @@ table td {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .character .character__dkImage {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -487,7 +487,7 @@ table td {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .character .character__whmImage {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -514,7 +514,7 @@ table td {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .character .character__bardImage {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -541,7 +541,7 @@ table td {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .character .character__rdmImage {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -568,7 +568,7 @@ table td {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .character .character__drgImage {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -627,7 +627,7 @@ table td {
   }
 }
 
-@media screen and (max-width: 768px) and (max-width: 425px) {
+@media screen and (max-width: 768px) and (max-width: 480px) {
   .introduction .introduction__cities {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -653,7 +653,7 @@ table td {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .introduction .introduction__cities .images {
     max-width: 100%;
   }
@@ -669,7 +669,7 @@ table td {
   max-width: 70%;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .introduction .introduction__cities .introduction__info {
     max-width: 85%;
   }
@@ -688,7 +688,7 @@ table td {
   justify-self: flex-end;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .introduction .introduction__cities .introduction__gridaniaFlag {
     -ms-grid-column-align: center;
         justify-self: center;
@@ -722,7 +722,7 @@ table td {
   justify-self: flex-end;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .introduction .introduction__cities .introduction__limnsaFlag {
     -ms-grid-column-align: center;
         justify-self: center;
@@ -756,7 +756,7 @@ table td {
   justify-self: flex-end;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .introduction .introduction__cities .introduction__uldahFlag {
     -ms-grid-column-align: center;
         justify-self: center;
@@ -846,7 +846,7 @@ table td {
   width: 200px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .footer .footer__logoEmpresa img {
     width: 160px;
   }

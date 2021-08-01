@@ -14,6 +14,7 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./style/css/style.css">
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
   <title>Final Legends | Informacion</title>
@@ -58,8 +59,8 @@
   <main>
     <section class="mapBackground">
       <div class="introduction">
-        <h2 class="introduction__title">Bienvenidos al mundo de Eorzea</h2>
-        <p class="introduction__content">Final Legends tiene lugar en el mundo de Eorzea e Ivallice, un mundo en el que
+        <h2 class="introduction__title"  data-aos="fade-down">Bienvenidos al mundo de Eorzea</h2>
+        <p class="introduction__content"  data-aos="fade-down">Final Legends tiene lugar en el mundo de Eorzea e Ivallice, un mundo en el que
           la sustancia mágica de los
           cristales:
           el éter, fluye por todas partes como la corriente vital del planeta, aunque esta valiosa sustancia puede
@@ -72,10 +73,10 @@
           a las persistentes amenazas que se presentan: las diferentes tribus de bestias, y el avance de la XIVª legión
           del imperio garleano.</p>
         <div class="introduction__cities">
-          <div class="introduction__gridaniaFlag images">
+          <div class="introduction__gridaniaFlag images"  data-aos="fade-up">
             <img src="./images/Gridania_Flag.png" alt="Bandera de Gridania">
           </div>
-          <div class="introduction__info introduction__gridaniaInfo">
+          <div class="introduction__info introduction__gridaniaInfo"  data-aos="fade-up">
             <h3 class="introduction__info__title">Gridania</h3>
             <p>
               En el centro oriental de la gran tierra de Aldenard, hogar de vastos y densos bosques y ríos, se encuentra
@@ -94,13 +95,13 @@
               del bosque.
             </p>
           </div>
-          <div class="introduction__gridaniaCity images">
+          <div class="introduction__gridaniaCity images"  data-aos="fade-up">
             <img class="img-fluid" src="./images/Gridania_ciudad.jpg" alt="Imagen de la ciudad de Gridania">
           </div>
-          <div class="introduction__limnsaFlag images">
+          <div class="introduction__limnsaFlag images"  data-aos="fade-up">
             <img src="./images/Limsa_Lominsa_Flag.png" alt="Bandera de Limnsa Lominsa">
           </div>
-          <div class="introduction__info introduction__limnsaInfo">
+          <div class="introduction__info introduction__limnsaInfo"  data-aos="fade-up">
             <h3 class="introduction__info__title">Limnsa Lominsa</h3>
             <p>
               En la costa sureña de la isla de Vylbrand, bajo la sombra de los acantilados antiguos azotados por el
@@ -118,13 +119,13 @@
               la riqueza proviene de la industria del transporte marítimo lucrativo.
             </p>
           </div>
-          <div class="introduction__limnsaCity images">
+          <div class="introduction__limnsaCity images"  data-aos="fade-up">
             <img class="img-fluid" src="./images/Limsa_Lominsa_ciudad.jpg" alt="Imagen de la ciudad de Limnsa Lominsa">
           </div>
-          <div class="introduction__uldahFlag images">
+          <div class="introduction__uldahFlag images"  data-aos="fade-up">
             <img src="./images/Uldah_Flag.png" alt="Bandera de Uldah">
           </div>
-          <div class="introduction__info  introduction__uldahInfo">
+          <div class="introduction__info  introduction__uldahInfo"  data-aos="fade-up">
             <h3 class="introduction__info__title">Ul'dah</h3>
             <p>
               Ul'dah (ウルダハ, Urudaha en japonés) es una nación comercial de Eorzea en Final Legends, siendo una de
@@ -146,13 +147,13 @@
               (Stormblood), y reaper (Endwalker).
             </p>
           </div>
-          <div class="introduction__uldahCity images">
+          <div class="introduction__uldahCity images"  data-aos="fade-up">
             <img class="img-fluid images" src="./images/uldah_ciudad.jpg" alt="Imagen de la ciudad de Uldah">
           </div>
         </div>
       </div>
     </section>
-    <section class="information">
+    <section class="information"  data-aos="fade-up">
       <h2 class="grotFont">Revive grandes aventuras</h2>
       <p class="latoFont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem culpa distinctio
         nostrum dignissimos
@@ -218,6 +219,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 250
+    });
+  </script>
 </body>
 
 </html>
