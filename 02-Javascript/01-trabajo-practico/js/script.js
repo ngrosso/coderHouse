@@ -1,3 +1,4 @@
+//TODO: Agregar un array de elementos de tipo Producto predefinidos
 // Main del proyecto
 function main() {
 
