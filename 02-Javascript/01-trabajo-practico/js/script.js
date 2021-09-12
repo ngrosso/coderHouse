@@ -17,7 +17,8 @@ function main() {
 
   // Manejo del array de productos
   arrayProductos.forEach(producto => {
-    listadoProductos += agregarListaProductos(producto);
+    //Se saca la asignacion ya que solo se usa para el alert
+    //listadoProductos += agregarListaProductos(producto);
     precioProductos += producto.getPrecioNeto();
     precioProductosConIva += aplicarIva(producto.getPrecioNeto());
   });
@@ -25,7 +26,12 @@ function main() {
   console.log('Valor total de productos sin Iva ' + precioProductos);
   console.log('Valor total de productos con Iva ' + precioProductosConIva);
 
-  alert(listadoProductos + '\n\n Subtotal: ' + precioProductos.toFixed(2) + '\n IVA    +21% \n Total: ' + precioProductosConIva.toFixed(2));
+  /** TODO: Para la proxima entrega con el uso de eventos voy a hacer una 
+   * refactorizacion importante usando forms y eventos por ahora busco solo 
+   * usar el DOM para generar un ticket*/
+  crearTicket(arrayProductos);
+
+  //alert(listadoProductos + '\n\n Subtotal: ' + precioProductos.toFixed(2) + '\n IVA    +21% \n Total: ' + precioProductosConIva.toFixed(2));
 }
 
 // Funciones Auxiliares
@@ -58,7 +64,38 @@ function agregarListaProductos(producto) {
 }
 
 function aplicarIva(precio) {
-  return precio * 1.21;
+  return precio * 0.21;
+}
+
+function crearTicket(arrayProductos) {
+  let ticket = document.getElementById('ticket');
+
+  if (arrayProductos.length > 0) {
+    let ul = document.createElement('ul');
+    arrayProductos.forEach(producto => {
+      let li = document.createElement('li');
+      li.innerText = `${producto.nombre} -------- Precio unitario: ${producto.precio} -------- Cantidad: ${producto.cantidad} -------- $${producto.getPrecioNeto()}`
+      ul.appendChild(li);
+    });
+    ticket.appendChild(ul);
+  } else{
+    ticket.innerText = 'No hay productos';
+  }
+
+  let subtotalElement = document.createElement('p');
+  const subtotal = arrayProductos.reduce((total, producto) => total + producto.getPrecioNeto(), 0);
+  subtotalElement.innerText = `Subtotal: $${subtotal}`;
+  ticket.appendChild(subtotalElement);
+
+  let ivaElement = document.createElement('p');
+  ivaElement.innerText = `IVA +21%: $${aplicarIva(subtotal)}`;
+  ticket.appendChild(ivaElement);
+
+  let totalElement = document.createElement('p');
+  totalElement.innerText = `Total: $${subtotal + aplicarIva(subtotal)}`;
+  ticket.appendChild(totalElement);
+  
+
 }
 
 //Declaracion de la clase Producto
