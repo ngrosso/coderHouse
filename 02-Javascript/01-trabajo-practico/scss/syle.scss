@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+}
+
+.encabezado {
+  display: grid;
+  grid-template-areas: "nombre precio cantidad borrar";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.encabezado__nombre {
+  grid-area: nombre;  
+}
+.encabezado__precio {
+  grid-area: precio;
+}
+.encabezado__cantidad {
+  grid-area: cantidad;
+}
+.encabezado__borrar {
+  grid-area: borrar;
+}
