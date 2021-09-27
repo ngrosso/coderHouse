@@ -3,7 +3,7 @@
           box-sizing: border-box;
 }
 
-.encabezado {
+.listaProductos__encabezado {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "nombre precio cantidad borrar";
@@ -16,26 +16,56 @@
   padding: 10px;
 }
 
-.encabezado__nombre {
+.listaProductos__encabezado--nombre {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: nombre;
 }
 
-.encabezado__precio {
+.listaProductos__encabezado--precio {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: precio;
 }
 
-.encabezado__cantidad {
+.listaProductos__encabezado--cantidad {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: cantidad;
 }
 
-.encabezado__borrar {
+.listaProductos__encabezado--borrar {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
   grid-area: borrar;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "title title" "sideMenu ticketList";
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+  -ms-grid-rows: 2rem 1fr;
+      grid-template-rows: 2rem 1fr;
+  gap: 50px;
+}
+
+.title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+}
+
+.sideMenu {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sideMenu;
+}
+
+.ticketList {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: ticketList;
 }

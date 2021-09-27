@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.encabezado {
+.listaProductos__encabezado {
   display: grid;
   grid-template-areas: "nombre precio cantidad borrar";
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -12,15 +12,35 @@
   padding: 10px;
 }
 
-.encabezado__nombre {
+.listaProductos__encabezado--nombre {
   grid-area: nombre;  
 }
-.encabezado__precio {
+.listaProductos__encabezado--precio {
   grid-area: precio;
 }
-.encabezado__cantidad {
+.listaProductos__encabezado--cantidad {
   grid-area: cantidad;
 }
-.encabezado__borrar {
+.listaProductos__encabezado--borrar {
   grid-area: borrar;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "title title" "sideMenu ticketList";
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 2rem 1fr;
+  gap: 50px;
+}
+
+.title {
+  grid-area: title;
+}
+
+.sideMenu {
+  grid-area: sideMenu;
+}
+
+.ticketList {
+  grid-area: ticketList;
 }

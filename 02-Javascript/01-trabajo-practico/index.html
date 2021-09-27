@@ -10,37 +10,40 @@
 </head>
 
 <body>
-  <h1>Simulador interactivo</h1>
-  <p>Paso 1: Agregar productos con los inputs</p>
-
-  <div class="ingresoProductos">
-    <label for="nombre">Nombre: </label>
-    <input type="text" name="name" id="nombre">
-    <label for="precio">Precio: </label>
-    <input type="number" name="precio" id="precio">
-    <label for="cantidad">Cantidad: </label>
-    <input type="number" name="cantidad" id="cantidad">
-    <button onclick="agregarProducto()">Agregar Producto</button>
-  </div>
-
-  <p>Paso 2: Remover productos no deseados</p>
-
-  <div id="listaProductos">
-    <div class="encabezado">
-      <div class="encabezado__nombre">Nombre</div>
-      <div class="encabezado__precio">Precio</div>
-      <div class="encabezado__cantidad">Cantidad</div>
-      <div class="encabezado__borrar">Borrar</div>
+  <div class="container">
+    <h1 class="title">Simulador interactivo</h1>
+    <div class="sideMenu">
+      <p>Paso 1: Agregar productos con los inputs</p>
+      <div class="ingresoProductos">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="name" id="nombre">
+        <label for="precio">Precio: </label>
+        <input type="number" name="precio" id="precio">
+        <label for="cantidad">Cantidad: </label>
+        <input type="number" name="cantidad" id="cantidad">
+        <button id="agregarProductoBtn">Agregar Producto</button>
+      </div>
+      <p>Paso 2: Remover productos no deseados</p>
+      <div id="listaProductos">
+        <div class="listaProductos__encabezado">
+          <div class="listaProductos__encabezado--nombre">Nombre</div>
+          <div class="listaProductos__encabezado--precio">Precio</div>
+          <div class="listaProductos__encabezado--cantidad">Cantidad</div>
+          <div class="listaProductos__encabezado--borrar">Borrar</div>
+        </div>
+      </div>
+    </div>
+    <div class="ticketList">
+      <p>Paso 3: Generar el ticket (es posible regenerarlo al editar la lista superior)</p>
+      <div>
+        <h2>Ticket</h2>
+        <div id="ticket"></div>
+      </div>
     </div>
   </div>
-  
-  <p>Paso 3: Generar el ticket (es posible regenerarlo al editar la lista superior)</p>
 
-  <div>
-    <h2>Ticket</h2>
-    <div id="ticket"></div>
-  </div>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
 </body>
 
