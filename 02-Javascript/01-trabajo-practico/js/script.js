@@ -16,6 +16,7 @@ class Producto {
 let precioProductos = 0;
 let precioProductosConIva = 0;
 let arrayProductos = [];
+let productosSelect = [{nombre: "-"}];
 const MENSAJE_ERROR = 'Por favor, complete todos los campos';
 
 // Funciones Auxiliares
@@ -60,10 +61,8 @@ function editarCompra() {
     $(`#container${producto.id}`).fadeIn("slow")
   })
 }
-//FIN FUNCIONES AUXILIARES
 
-// Inicializador usando localstorage
-(() => {
+function inicializarLocalstorage() {
   let arrayProductosLS = JSON.parse(localStorage.getItem('productos'));
   if (arrayProductosLS) {
     arrayProductosLS.forEach(producto => {
@@ -73,6 +72,36 @@ function editarCompra() {
     })
   }
   generarTicket();
+}
+
+function inicializarAPI() {
+  const APIURL = 'https://my-json-server.typicode.com/ngrosso/coderhouse'
+  $.ajax({
+    url: APIURL + '/productos',
+    method: 'GET',
+    headers: {
+      "accept": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    },
+    success: function (data) {
+      data.forEach(producto => {
+        let objProducto = new Producto(producto.nombre, producto.precio, producto.cantidad, producto.id)
+        productosSelect.push(objProducto);
+      })
+      renderizarProductosSelect(productosSelect);
+    },
+    error: function (xhr, status) {
+      console.error(status);
+    }
+  });
+
+}
+//FIN FUNCIONES AUXILIARES
+
+// Inicializador usando localstorage y api
+(() => {
+  inicializarLocalstorage();
+  inicializarAPI();
 })();
 
 // Trigger del boton para agregar productos
@@ -104,7 +133,7 @@ function renderizarProducto(producto) {
     <div class="productoContainer__precio">${producto.precio}</div>
     <div class="productoContainer__cantidad">${producto.cantidad}</div>
     <div class="productoContainer__borrar">
-      <button value="${producto.id}">X</button>
+      <button value="${producto.id}" class="btn btn-danger w-100">X</button>
     </div>
   </div>
   `)
@@ -141,21 +170,12 @@ function estilizarProducto() {
     "grid-area": "borrar",
   })
 
-  $('.productoContainer__borrar button').css({
-    "width": "100%",
-    "height": "100%",
-    "background-color": "red",
-    "border": "2px solid black",
-    "color": "white",
-  })
-
   $('.productoContainer__borrar button').click((e) => {
     // Funcion para borrar un producto del array y del DOM
     e.preventDefault();
-    let index = 0;
     let idBorrar = e.target.value;
     console.log($(`#${idBorrar}`).parent().parent());
-    arrayProductos.forEach(producto => {
+    arrayProductos.forEach((producto,index) => {
       if (producto.id == idBorrar) {
         $(`#container${idBorrar}`).fadeOut("slow", () => {
           $(`#container${idBorrar}`).remove()
@@ -163,9 +183,23 @@ function estilizarProducto() {
         //
         arrayProductos.splice(index, 1);
       }
-      index++;
     })
     generarTicket();
+  })
+}
+
+function renderizarProductosSelect(productos) {
+  productos.forEach(producto => {
+    $('#productosExistentes').append(`
+    <option class="form-label" value="${producto.id}">${producto.nombre}</option>
+    `)
+  })
+  $('#productosExistentes').change(() => {
+    let idProducto = $('#productosExistentes').val();
+    let producto = productosSelect.find(producto => producto.id == idProducto);
+    $('#nombre').val(producto.nombre);
+    $('#precio').val(producto.precio);
+    $('#cantidad').val(producto.cantidad);
   })
 }
 
