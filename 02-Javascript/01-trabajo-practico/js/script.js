@@ -48,6 +48,18 @@ function handleLocalStorage(arrayProductos) {
     localStorage.setItem('productos', JSON.stringify(arrayProductos));
   }
 }
+
+function confirmarCompra() {
+  arrayProductos.forEach((producto) => {
+    $(`#container${producto.id}`).fadeOut("slow")
+  });
+}
+
+function editarCompra() {
+  arrayProductos.forEach((producto) => {
+    $(`#container${producto.id}`).fadeIn("slow")
+  })
+}
 //FIN FUNCIONES AUXILIARES
 
 // Inicializador usando localstorage
@@ -87,7 +99,7 @@ $('#agregarProductoBtn').click(() => {
 // Renderiza producto en el HTML
 function renderizarProducto(producto) {
   $('#listaProductos').append(`
-  <div class="productoContainer" id="container${producto.id}">
+  <div class="productoContainer" id="container${producto.id}" style="display:none">
     <div class="productoContainer__nombre">${producto.nombre}</div>
     <div class="productoContainer__precio">${producto.precio}</div>
     <div class="productoContainer__cantidad">${producto.cantidad}</div>
@@ -95,7 +107,9 @@ function renderizarProducto(producto) {
       <button value="${producto.id}">X</button>
     </div>
   </div>
-  `);
+  `)
+
+  $(`.productoContainer`).fadeIn("slow");
 
   estilizarProducto();
 }
@@ -143,7 +157,10 @@ function estilizarProducto() {
     console.log($(`#${idBorrar}`).parent().parent());
     arrayProductos.forEach(producto => {
       if (producto.id == idBorrar) {
-        $(`#container${idBorrar}`).remove()
+        $(`#container${idBorrar}`).fadeOut("slow", () => {
+          $(`#container${idBorrar}`).remove()
+        });
+        //
         arrayProductos.splice(index, 1);
       }
       index++;
