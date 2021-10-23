@@ -1,0 +1,1 @@
+const db = '{"productos": [{"id": 1633359577574,"nombre": "[Local]Botella de agua","precio": 20},{"id": 1633359664435,"nombre": "Taza","precio": 240},{"id": 1633361192769,"nombre": "Velador","precio": 520.50},{"id": 1633361955222,"nombre": "Parlante de musica","precio": 1500}], "profile": {"name": "simulador"}}'

@@ -21,14 +21,6 @@
       "precio": 1500
     }
   ],
-  "usuarios": [
-    {
-      "usuario": "ngrosso",
-      "compras": [
-        {}
-      ]
-    }
-  ],
   "profile": {
     "name": "simulador"
   }

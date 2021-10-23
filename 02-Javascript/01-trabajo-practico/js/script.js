@@ -16,8 +16,9 @@ class Producto {
 let precioProductos = 0;
 let precioProductosConIva = 0;
 let arrayProductos = [];
-let productosSelect = [{nombre: "-"}];
+let productosSelect = [{ nombre: "-" }];
 const MENSAJE_ERROR = 'Por favor, complete todos los campos';
+const APIURL = 'https://my-json-server.typicode.com/ngrosso/coderhouse' //romper url para probar la base local
 
 // Funciones Auxiliares
 function aplicarIva(precio) {
@@ -75,7 +76,6 @@ function inicializarLocalstorage() {
 }
 
 function inicializarAPI() {
-  const APIURL = 'https://my-json-server.typicode.com/ngrosso/coderhouse'
   $.ajax({
     url: APIURL + '/productos',
     method: 'GET',
@@ -84,17 +84,22 @@ function inicializarAPI() {
       "Access-Control-Allow-Origin": "*"
     },
     success: function (data) {
-      data.forEach(producto => {
-        let objProducto = new Producto(producto.nombre, producto.precio, producto.cantidad, producto.id)
-        productosSelect.push(objProducto);
-      })
-      renderizarProductosSelect(productosSelect);
+      armarSelectProductos(data);
     },
     error: function (xhr, status) {
-      console.error(status);
+      console.error("Error de conexion: No se pudo usar la api para descargar los productos, se usara la version local");
+      let data = JSON.parse(db);
+      armarSelectProductos(data.productos);
     }
   });
+}
 
+function armarSelectProductos(data){
+  data.forEach(producto => {
+    let objProducto = new Producto(producto.nombre, producto.precio, producto.cantidad, producto.id)
+    productosSelect.push(objProducto);
+  })
+  renderizarProductosSelect(productosSelect);
 }
 //FIN FUNCIONES AUXILIARES
 
@@ -155,7 +160,10 @@ function estilizarProducto() {
   })
 
   $('.productoContainer__nombre').css({
-    "grid-area": "nombre"
+    "grid-area": "nombre",
+    "text-overflow": "ellipsis",
+    "white-space": "nowrap",
+    "overflow": "hidden"
   })
 
   $('.productoContainer__precio').css({
@@ -175,7 +183,7 @@ function estilizarProducto() {
     e.preventDefault();
     let idBorrar = e.target.value;
     console.log($(`#${idBorrar}`).parent().parent());
-    arrayProductos.forEach((producto,index) => {
+    arrayProductos.forEach((producto, index) => {
       if (producto.id == idBorrar) {
         $(`#container${idBorrar}`).fadeOut("slow", () => {
           $(`#container${idBorrar}`).remove()
@@ -188,6 +196,7 @@ function estilizarProducto() {
   })
 }
 
+//Genera las opciones en el html y  autocompleta los inputs al seleccionar el producto
 function renderizarProductosSelect(productos) {
   productos.forEach(producto => {
     $('#productosExistentes').append(`
@@ -227,7 +236,7 @@ function generarTicket() {
   // Calculo de precios subtotal, iva y total
   let subtotalElement = document.createElement('p');
   const subtotal = arrayProductos.reduce((total, producto) => total + producto.getPrecioNeto(), 0);
-  subtotalElement.innerText = `Subtotal: $${subtotal}`;
+  subtotalElement.innerText = `Subtotal: $${precioFormatter.format(subtotal)}`;
   ticket.appendChild(subtotalElement);
 
   let ivaElement = document.createElement('p');
